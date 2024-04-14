@@ -1,0 +1,99 @@
+#!/bin/sh
+
+cd /opt/pwn.college
+
+if [ -n "$1" ]
+then
+    ACTION="$1"
+    shift
+else
+    ACTION="help"
+fi
+
+case "$ACTION" in
+    # HELP: update: update dojo files (warning: does `git pull`), rebuild containers, and restart any changed services
+    "update")
+        git pull
+        dojo sync
+        dojo compose up -d --build
+        ;;
+
+    # HELP: sync: sync changed dojo files
+    "sync")
+        cp -rv --preserve=timestamps ctfd/* /opt/CTFd/
+        cp -rv --preserve=timestamps dojo_plugin /opt/CTFd/CTFd/plugins/
+        cp -rv --preserve=timestamps dojo_theme /opt/CTFd/CTFd/themes/
+        ;;
+
+    # HELP: enter USER_ID: enter a user's running container. Can change users via USER env var.
+    "enter")
+        CONTAINER="user_$1"
+        shift
+        if [ -z "$USER" ]; then
+            docker exec -it "$CONTAINER" bash
+        else
+            docker exec -it --user="$USER" "$CONTAINER" bash
+        fi
+        ;;
+
+    # HELP: compose ARGS: run a docker compose command with the config.env file loaded
+    "compose")
+        docker compose --env-file=/opt/pwn.college/data/config.env "$@"
+        ;;
+
+    # HELP: flask: drop into a flask shell in the ctfd container
+    "flask")
+        docker exec -it ctfd flask shell "$@"
+        ;;
+
+    # HELP: db: launch a mysql client session, connected to the ctfd db
+    "db")
+        docker exec -it db mysql -pctfd -Dctfd ctfd "$@"
+        ;;
+
+    "backup") # Does a dojo db backup into the `data/backups` directory.
+        mkdir -p data/backups
+        docker exec db mysqldump -pctfd --single-transaction --routines --triggers ctfd | gzip > "data/backups/db-$(date -Iseconds).sql.gz"
+        ;;
+
+    # HELP: resture PATH: restores a dojo db backup. Path arg is relative to the `data/backups` directory
+    "restore")
+        BACKUP_PATH="data/backups/$1"
+        if [ -f "$BACKUP_PATH" ]; then
+            gunzip < "$BACKUP_PATH" | docker exec -i db mysql -pctfd -Dctfd
+        else
+            echo "Error: missing file to restore from" >&2
+        fi
+        ;;
+
+    # HELP: logs: display dojo logs
+    "logs")
+        journalctl -u pwn.college -f
+        ;;
+
+    # HELP: start: start the dojo. Main entry point for the docker image.
+    "start")
+        dojo sync
+        echo "[+] Setting up container runtime environment."
+        container-setup.sh
+        echo "[+] Starting systemd. If this is the first start, the challenge container"
+        echo "    will be built, which will take a very long time."
+        exec /usr/bin/systemd
+        ;;
+
+    # HELP: help: displays this help
+    "help")
+        echo "Usage: $0 COMMAND [ ARG ]"
+	echo
+	echo "COMMANDS:"
+	echo
+	cat "$0" | grep "[H]ELP" | sed -e "s/.*H[E]LP: /\t/"
+        ;;
+
+    *)
+        echo "Unknown command."
+	echo ""
+	"$0" help
+        exit 1
+        ;;
+esac

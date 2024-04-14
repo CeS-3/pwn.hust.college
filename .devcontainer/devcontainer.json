@@ -1,0 +1,48 @@
+{
+	"name": "Existing Dockerfile",
+	"build": {
+		"context": "..",
+		"dockerfile": "../Dockerfile"
+	},
+	"forwardPorts": [22, 80, 443],
+	"portsAttributes": {
+		"22": {
+            "label": "SSH"
+        },
+		"80": {
+            "label": "HTTP"
+        },
+		"443": {
+            "label": "HTTPS"
+        }
+    },
+	"mounts": [
+		{
+			"source": "${localWorkspaceFolder}",
+			"target": "/opt/pwn.college",
+			"type": "bind"
+		},
+		{
+			"source": "dind-var-lib-docker-${devcontainerId}",
+			"target": "/opt/pwn.college/data/docker",
+			"type": "volume"
+		}
+	],
+	"containerEnv": {
+		"DOJO_ENV": "development",
+		"DOJO_CHALLENGE": "challenge-minimal",
+		"PYTHONPATH": "/opt/CTFd"
+	},
+	"overrideCommand": false,
+	"updateContentCommand": "/opt/pwn.college/.devcontainer/setup.sh",
+	"runArgs": ["--privileged"],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-azuretools.vscode-docker",
+				"samuelcolvin.jinjahtml"
+			]
+		}
+	}
+}

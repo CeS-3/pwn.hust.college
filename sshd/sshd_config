@@ -1,0 +1,10 @@
+PasswordAuthentication no
+UsePAM yes
+
+Subsystem sftp    /usr/lib/openssh/sftp-server
+
+Match User hacker
+      AuthorizedKeysCommand /opt/sshd/auth.py
+      AuthorizedKeysCommandUser root
+      X11Forwarding no
+      AllowTcpForwarding no

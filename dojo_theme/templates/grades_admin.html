@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+  <div class="container">
+    <h1>All Grades</h1>
+  </div>
+</div>
+<div class="container">
+  <div id="grades" class="row">
+    <div class="col-md-12">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            {% for key in grades[0] %}
+            <td scope="col"><b>{{ key }}</b></td>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for user_grades in grades %}
+          <tr>
+            {% for key, value in user_grades.items() %}
+            <td>
+              {% if key == 'id' %}
+              {% if value is not none %}
+              <a href="{{ generate_account_url(value, admin=True) }}">{{ value }}</a>
+              {% else %}
+              <b>?</b>
+              {% endif %}
+              {% elif value is number %}
+              {{ "%.2f"|format(value) }}%
+              {% elif value is not none %}
+              {{ value }}
+              {% endif %}
+            </td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+        <tfoot>
+          {% for statistic in grade_statistics %}
+          <tr>
+            {% for value in statistic.values() %}
+            <td>
+              {% if value is number %}
+              {{ "%.2f"|format(value) }}%
+              {% elif value is not none %}
+              <b>{{ value }}</b>
+              {% endif %}
+            </td>
+            {% endfor %}
+          </tr>
+          {% endfor %}
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

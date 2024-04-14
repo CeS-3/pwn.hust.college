@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron">
+    <div class="container">
+        <h1>Dojo Admin</h1>
+        <br>
+        <h2>{{ dojo.name }}</h2>
+    </div>
+</div>
+<div class="container">
+    <div class="row text-center">
+      <div class="col-lg-auto m-3">
+        <figure>
+          <a class="text-decoration-none" href="#"
+            data-copy="{{ url_for('pwncollege_dojos.join_dojo', dojo=dojo.reference_id, password=dojo.password, _external=True) }}"
+            onclick="copyToClipboard(event)">
+            <i class="fas fa-share fa-3x"></i>
+            <figcaption><b style="font-family: 'Courier New', Courier, monospace" id="tooltip">&nbsp;Share&nbsp;</b></figcaption>
+          </a>
+        </figure>
+      </div>
+        <div class="col-lg-auto m-3">
+          <figure>
+            <a class="text-decoration-none" href="{{ url_for('pwncollege_dojos.update_dojo', dojo=dojo.reference_id, update_code=dojo.update_code) }}" target="_blank">
+              <i class="fas fa-upload fa-3x"></i>
+              <figcaption><b style="font-family: 'Courier New', Courier, monospace">Update</b></figcaption>
+            </a>
+          </figure>
+        </div>
+        <div class="col-lg-auto m-3">
+          <figure>
+            <a class="text-decoration-none" href="{{ url_for('pwncollege_dojos.view_dojo_solves', dojo=dojo.reference_id) }}" target="_blank">
+              <i class="fas fa-file-csv fa-3x"></i>
+              <figcaption><b style="font-family: 'Courier New', Courier, monospace">Solves</b></figcaption>
+            </a>
+          </figure>
+        </div>
+        <br>
+    </div>
+    <b style="font-family: 'Courier New', Courier, monospace">Reference ID: </b><code>{{ dojo.reference_id }}</code>
+    <br>
+    <b style="font-family: 'Courier New', Courier, monospace">Dojo ID: </b><code>{{ dojo.hex_dojo_id }}</code>
+    <br>
+    <!-- <b style="font-family: 'Courier New', Courier, monospace">Update Code: </b><code>{{ dojo.update_code }}</code>
+    <br> -->
+    <b style="font-family: 'Courier New', Courier, monospace">Git Hash: </b><code>{{ dojo.hash[:8] }}</code>
+    <br>
+    <b style="font-family: 'Courier New', Courier, monospace">Admins</b>
+    <ul>
+        {% for admin in dojo.admins %}
+            <li>{{ admin.user.name }}</li>
+        {% endfor %}
+    </ul>
+    <b style="font-family: 'Courier New', Courier, monospace">Members</b>
+    <ul>
+        {% for member in dojo.members %}
+            <li>{{ member.user.name }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+
