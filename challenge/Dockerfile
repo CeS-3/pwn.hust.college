@@ -402,9 +402,9 @@ ENV LC_CTYPE=C.UTF-8
 
 COPY --link --from=builder / /
 COPY --link --from=builder-code-server / /
+COPY --link --from=builder-desktop-base / /
 COPY --link --from=builder-tools-apt / /
 COPY --link --from=builder-pwn.college /opt/pwn.college /opt/pwn.college
-COPY --link --from=builder-desktop-base / /
 
 RUN <<EOF
     useradd -s /bin/bash -m hacker
