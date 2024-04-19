@@ -1,6 +1,8 @@
 # syntax=docker/dockerfile:1
 
-FROM ubuntu:20.04 as builder
+ARG UBUNTU_VERSION=22.04
+
+FROM ubuntu:${UBUNTU_VERSION} as builder
 
 SHELL ["/bin/bash", "-ceov", "pipefail"]
 
