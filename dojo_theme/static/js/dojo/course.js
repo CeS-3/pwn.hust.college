@@ -43,7 +43,7 @@ CTFd.fetch(endpoint, {
 }
 
 $(() => {
-form_fetch_and_show("identity", `/dojo/${init.dojo}/course/identity`, "PATCH", "Your identity has been updated");
+    form_fetch_and_show("identity", `/dojo/${init.dojo}/course/identity`, "PATCH", "Your identity has been updated");
 
     let navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
