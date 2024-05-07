@@ -66,9 +66,11 @@ choco install tightvnc -y --installArguments 'ADDLOCAL=Server SET_RFBPORT=1 VALU
 add-appxpackage -Path C:\windbg.msixbundle
 Remove-Item -Force -Path C:\windbg.msixbundle
 
-# -- install visual studio --
+# -- install tools --
 choco install -y visualstudio2022community
 choco install -y visualstudio2022-workload-nativedesktop
+choco install -y ida-free
+choco install -y python311 --params "CompileAll=1"
 
 # -- disable admin account --
 net user administrator /active:no
