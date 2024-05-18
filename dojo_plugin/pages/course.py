@@ -216,7 +216,7 @@ def view_course(dojo, resource=None):
         user = get_current_user()
         name = "Your"
 
-    ignore_pending = bool(request.args.get("ignore_pending"))
+    ignore_pending = request.args.get("ignore_pending") is not None
 
     grades = {}
     identity = {}
@@ -310,7 +310,7 @@ def view_all_grades(dojo):
     if not dojo.is_admin():
         abort(403)
 
-    ignore_pending = bool(request.args.get("ignore_pending"))
+    ignore_pending = request.args.get("ignore_pending") is not None
 
     users = (
         Users
