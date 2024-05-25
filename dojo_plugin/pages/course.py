@@ -215,6 +215,7 @@ def grade(dojo, users_query, *, ignore_pending=False):
 
 
 @course.route("/dojo/<dojo>/course")
+@course.route("/dojo/<dojo>/course/<resource>")
 @dojo_route
 def view_course(dojo, resource=None):
     if not dojo.course:

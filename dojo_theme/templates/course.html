@@ -48,7 +48,6 @@
     </div>
     <div class="col-md-8">
       <div class="tab-content" id="v-pills-tabContent">
-<<<<<<< HEAD
         <div class="tab-pane fade show active" id="syllabus" role="tabpanel">
           {% if dojo.course.syllabus %}
             {{ dojo.course.syllabus | markdown }}
@@ -137,13 +136,6 @@
 </div>
 {% endblock %}
 
-<<<<<<< HEAD
-=======
-{% block entrypoint %}
-<script defer src="{{ url_for('views.themes', path='js/pages/settings.js') }}"></script>
-{% endblock %}
-
->>>>>>> 99bf64f (Add "course" page (#206))
 {% block scripts %}
 <script defer src="{{ url_for('views.themes', path='js/dojo/course.js') }}"></script>
 {% endblock %}
