@@ -1,11 +1,11 @@
-import hashlib
-from urllib.parse import urlparse
+import hmac
 
 from flask import request, Blueprint, render_template, redirect, url_for, abort
 from CTFd.models import Users
 from CTFd.utils.user import get_current_user, is_admin
 from CTFd.utils.decorators import authed_only
 
+from ..models import Dojos
 from ..utils import random_home_path, redirect_user_socket, get_current_container
 from ..utils.dojo import dojo_route, get_current_dojo_challenge
 
@@ -19,34 +19,56 @@ port_names = {
 }
 
 
+def container_password(container, *args):
+    key = container.id.encode()
+    message = "-".join(args).encode()
+    return hmac.HMAC(key, message, "sha256").hexdigest()
+
+
 @workspace.route("/workspace/desktop")
 @authed_only
 def view_desktop():
-    # vnc.html?autoconnect=1&reconnect=1&path={route}/{user_id}/websockify&resize=remote&reconnect_delay=10&view_only={view_only}&password={password}
+    user_id = request.args.get("user")
+    password = request.args.get("password")
 
-    container = get_current_container()
-    data = "-".join([container.id, "desktop", "view"])
-    data = "-".join([container.id, "desktop", "interact"])
-    hashlib.sha256(container.id).hexdigest()
+    if user_id and password:
+        user = Users.query.filter_by(id=int(user_id)).first_or_404()
+        container = get_current_container(user)
+        interact_password = container_password(container, "desktop", "interact")
+        view_password = container_password(container, "desktop", "view")
+        if not hmac.compare_digest(password, interact_password) and not hmac.compare_digest(password, view_password):
+            abort(403)
+        password = password[:8]
+        view_only = True
+        access_code = container_password(container, "desktop")
+        service = f"desktop~{user.id}~{access_code}"
 
-    # current_user = get_current_user()
-    # if user_id is None:
-    #     user_id = current_user.id
+    elif user_id and not password:
+        if not is_admin():
+            abort(403)
+        user = Users.query.filter_by(id=int(user_id)).first_or_404()
+        container = get_current_container(user)
+        password = container_password(container, "desktop", "interact")[:8]
+        view_only = True
+        service = f"desktop~{user.id}"
 
-    # user = Users.query.filter_by(id=user_id).first()
-    # if not can_connect_to(user):
-    #     abort(403)
+    else:
+        user = get_current_user()
+        container = get_current_container(user)
+        password = container_password(container, "desktop", "interact")[:8]
+        view_only = False
+        service = "desktop"
 
     vnc_params = {
         "autoconnect": 1,
         "reconnect": 1,
         "reconnect_delay": 10,
         "resize": "remote",
-        "path": url_for("pwncollege_workspace.forward_workspace", service=service, path="websockify"),
+        "path": url_for("pwncollege_workspace.forward_workspace", service=service, service_path="websockify"),
         "view_only": int(view_only),
         "password": password,
     }
-    iframe_src = url_for("pwncollege_workspace.forward_workspace", service=service, path="vnc.html", **vnc_params)
+    iframe_src = url_for("pwncollege_workspace.forward_workspace", service=service, service_path="vnc.html", **vnc_params)
     active = bool(get_current_dojo_challenge(user))
     return render_template("iframe.html", iframe_src=iframe_src, active=active)
 
@@ -59,16 +81,16 @@ def view_workspace(service):
 
 
 @workspace.route("/workspace/<service>/", websocket=True)
-@workspace.route("/workspace/<service>/<path:path>", websocket=True)
+@workspace.route("/workspace/<service>/<path:service_path>", websocket=True)
 @workspace.route("/workspace/<service>/")
-@workspace.route("/workspace/<service>/<path:path>")
+@workspace.route("/workspace/<service>/<path:service_path>")
 @authed_only
-def forward_workspace(service, path=""):
+def forward_workspace(service, service_path=""):
     prefix = f"/workspace/{service}/"
     assert request.full_path.startswith(prefix)
-    path = request.full_path[len(prefix):]
+    service_path = request.full_path[len(prefix):]
 
-    if "~" not in service:
+    if service.count("~") == 0:
         port = service
         try:
             user = get_current_user()
@@ -76,8 +98,8 @@ def forward_workspace(service, path=""):
         except ValueError:
             abort(404)
 
-    elif is_admin():
-        port, user_id = service.split("~")
+    elif service.count("~") == 1:
+        port, user_id = service.split("~", 1)
         try:
             user = Users.query.filter_by(id=int(user_id)).first_or_404()
             port = int(port_names.get(port, port))
@@ -107,6 +129,6 @@ def forward_workspace(service, path=""):
             abort(403)
 
     else:
-        abort(403)
+        abort(404)
 
-    return redirect_user_socket(user, port, path)
+    return redirect_user_socket(user, port, service_path)
