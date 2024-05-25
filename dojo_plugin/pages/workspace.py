@@ -37,17 +37,16 @@ def view_desktop():
     # if not can_connect_to(user):
     #     abort(403)
 
-    # if password is None:
-    #     try:
-    #         password_type = "interact" if can_control(user) else "view"
-    #         password_path = f"/var/homes/nosuid/{random_home_path(user)}/.vnc/pass-{password_type}"
-    #         password = open(password_path).read()
-    #     except FileNotFoundError:
-    #         password = None
-
-
-    active = bool(get_current_dojo_challenge())
-    iframe_src = f"/workspace/desktop/vnc.html?autoconnect=1&reconnect=1&resize=remote&reconnect_delay=10&view_only=0&password={data}"
+    vnc_params = {
+        "autoconnect": 1,
+        "reconnect": 1,
+        "reconnect_delay": 10,
+        "resize": "remote",
+        "view_only": int(view_only),
+        "password": password,
+    }
+    iframe_src = url_for("pwncollege_workspace.forward_workspace", service=service, path="vnc.html", _scheme=request.scheme, **vnc_params)
+    active = bool(get_current_dojo_challenge(user))
     return render_template("iframe.html", iframe_src=iframe_src, active=active)
 
 
