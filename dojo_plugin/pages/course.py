@@ -104,7 +104,7 @@ def grade(dojo, users_query, *, ignore_pending=False):
                 module_id = assessment["id"]
                 weight = assessment["weight"]
                 percent_required = assessment.get("percent_required", 0.334)
-                extension = assessment.get("extensions", {}).get(user_id, 0)
+                extension = assessment.get("extensions", {}).get(str(user_id), 0)
 
                 module_name = module_names.get(module_id)
                 if not module_name:
@@ -128,8 +128,8 @@ def grade(dojo, users_query, *, ignore_pending=False):
                 weight = assessment["weight"]
                 percent_required = assessment.get("percent_required", 1.0)
                 late_penalty = assessment.get("late_penalty", 0.0)
-                extension = assessment.get("extensions", {}).get(user_id, 0)
-                override = assessment.get("overrides", {}).get(user_id, None)
+                extension = assessment.get("extensions", {}).get(str(user_id), 0)
+                override = assessment.get("overrides", {}).get(str(user_id), None)
 
                 module_name = module_names.get(module_id)
                 if not module_name:
