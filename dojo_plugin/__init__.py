@@ -113,7 +113,6 @@ def load(app):
 
     if not app.debug:
         app.before_request(redirect_dojo)
-    app.before_request(redirect_workspace_referers)
 
     app.register_blueprint(dojos)
     app.register_blueprint(dojo)
