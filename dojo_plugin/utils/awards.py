@@ -1,8 +1,9 @@
 import datetime
 
 from CTFd.cache import cache
+from CTFd.models import db
 from flask import url_for
-from ..models import Dojos, Belts
+from ..models import Dojos, Belts, Emojis
 
 
 BELT_REQUIREMENTS = {
@@ -72,3 +73,20 @@ def get_belts():
         result["ranks"][result["users"][user_id]["color"]].append(user_id)
 
     return result
+
+def update_awards(user):
+    current_belts = get_user_belts(user)
+    for belt in current_belts:
+        belt_award = Belts.query.filter_by(user=user, name=belt).first()
+        if belt_award:
+            continue
+        db.session.add(Belts(user=user, name=belt))
+        db.session.commit()
+
+    current_emojis = get_user_emojis(user)
+    for emoji in current_emojis:
+        emoji_award = Emojis.query.filter_by(user=user, name=emoji).first()
+        if emoji_award:
+            continue
+        db.session.add(Emojis(user=user, name=emoji))
+        db.session.commit()
