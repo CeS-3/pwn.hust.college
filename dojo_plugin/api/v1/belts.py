@@ -8,6 +8,7 @@ from CTFd.models import db, Users, Solves
 from ...models import Dojos
 from ...utils.dojo import BELT_REQUIREMENTS
 
+from ...utils.awards import get_belts
 
 belts_namespace = Namespace("belts", description="Endpoint to manage belts")
 
