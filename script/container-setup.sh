@@ -16,8 +16,7 @@ define () {
 }
 define DOJO_HOST localhost.pwn.hust.college
 define DOJO_ENV development
-define DOJO_CHALLENGE challenge-granular
-define WINDOWS_VM none
+define DOJO_CHALLENGE challenge-mini
 define SECRET_KEY $(openssl rand -hex 16)
 define DOCKER_PSLR $(openssl rand -hex 16)
 define UBUNTU_VERSION 20.04
