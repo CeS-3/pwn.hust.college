@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 cd /opt/pwn.college
 
@@ -58,20 +58,21 @@ case "$ACTION" in
 
     # HELP: flask: drop into a flask shell in the ctfd container
     "flask")
-        docker exec -it ctfd flask shell "$@"
+        docker exec $DOCKER_ARGS ctfd flask shell "$@"
         ;;
 
     # HELP: db: launch a mysql client session, connected to the ctfd db
     "db")
-        docker exec -it db mysql -pctfd -Dctfd ctfd "$@"
+        docker exec $DOCKER_ARGS db mysql -pctfd -Dctfd ctfd "$@"
         ;;
 
-    "backup") # Does a dojo db backup into the `data/backups` directory.
+    # HELP: backup: does a dojo db backup into the `data/backups` directory.
+    "backup")
         mkdir -p data/backups
         docker exec db mysqldump -pctfd --single-transaction --routines --triggers ctfd | gzip > "data/backups/db-$(date -Iseconds).sql.gz"
         ;;
 
-    # HELP: resture PATH: restores a dojo db backup. Path arg is relative to the `data/backups` directory
+    # HELP: restore PATH: restores a dojo db backup. Path arg is relative to the `data/backups` directory
     "restore")
         BACKUP_PATH="data/backups/$1"
         if [ -f "$BACKUP_PATH" ]; then

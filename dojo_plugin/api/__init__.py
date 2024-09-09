@@ -7,6 +7,7 @@ from .v1.scoreboard import scoreboard_namespace
 from .v1.ssh_key import ssh_key_namespace
 from .v1.dojo import dojo_namespace
 from .v1.belts import belts_namespace
+from .v1.score import score_namespace
 
 
 api = Blueprint("pwncollege_api", __name__)
