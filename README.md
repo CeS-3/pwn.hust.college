@@ -17,9 +17,9 @@ The associated challenge binary may be either global, which means all users will
 
 ```sh
 export DOWNLOAD_URL="https://mirrors.hust.edu.cn/docker-ce" && curl -fsSL https://get.docker.com | /bin/sh
-git clone https://github.com/hust-open-atom-club/dojo.git
-docker build -t pwncollege/dojo dojo
-docker run --privileged -d -v "dojo:/opt/pwn.college:shared" -p 22:22 -p 80:80 -p 443:443 --name dojo pwncollege/dojo
+git clone https://github.com/CeS-3/pwn.hust.college.git
+docker build -t pwnhustcollege/dojo pwn.hust.college
+docker run --privileged -d -v "pwn.hust.college:/opt/pwn.college:shared" -p 22:22 -p 80:80 -p 443:443 --name dojo pwnhustcollege/dojo
 ```
 
 This will run the initial setup, including building the challenge docker image. It would build docker image based on the host architecture.
@@ -95,11 +95,11 @@ dojo update
 When updating your dojo deployment, there is only one supported method in the `dojo` directory:
 
 ```sh
-docker kill pwncollege/dojo
-docker rm pwncollege/dojo
+docker kill pwnhustcollege/dojo
+docker rm pwnhustcollege/dojo
 git pull
-docker build -t pwncollege/dojo dojo
-docker run --privileged -d -v "dojo:/opt/pwn.college:shared" -p 22:22 -p 80:80 -p 443:443 --name dojo pwncollege/dojo
+docker build -t pwnhustcollege/dojo pwn.hust.college
+docker run --privileged -d -v "pwn.hust.college:/opt/pwn.college:shared" -p 22:22 -p 80:80 -p 443:443 --name dojo pwnhustcollege/dojo
 ```
 
 This will cause downtime when the dojo is rebuilding.
