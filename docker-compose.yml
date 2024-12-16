@@ -189,7 +189,9 @@ services:
 
   open-webui:
     container_name: open-webui
-    image: cees3/sensai:v2.37
+    build:
+      context: ./sensai
+      dockerfile: Dockerfile
     environment:
       - OLLAMA_BASE_URLS=http://222.20.126.129:11434
     volumes:
