@@ -2,6 +2,8 @@ FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV LC_CTYPE=C.UTF-8
+ENV PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+ENV PIP_TRUSTED_HOST=pypi.tuna.tsinghua.edu.cn
 
 RUN chmod 1777 /tmp
 RUN sed -i.bak 's|https\?://archive.ubuntu.com|http://mirrors.hust.edu.cn|g' /etc/apt/sources.list
@@ -15,10 +17,26 @@ RUN apt-get update && \
         iproute2 \
         iputils-ping \
         host \
-        htop
+        htop \
+        gnupg \
+        lsb-release \
+        software-properties-common
 
-RUN export DOWNLOAD_URL="https://mirrors.tuna.tsinghua.edu.cn/docker-ce" && curl -fsSL https://get.docker.com | /bin/sh
-RUN echo '{ "data-root": "/opt/pwn.college/data/docker" }' > /etc/docker/daemon.json
+
+RUN mkdir -p /etc/apt/keyrings && \
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg && \
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list
+
+
+RUN apt-get update && apt-get install -y \
+    docker-ce \
+    docker-ce-cli \
+    containerd.io
+
+
+RUN mkdir -p /etc/docker
+RUN echo '{"registry-mirrors": ["https://dockerpull.cn"], "data-root": "/opt/pwn.college/data/docker"}' > /etc/docker/daemon.json
+
 
 RUN docker buildx install
 RUN git clone --branch 3.6.0 https://github.com/CTFd/CTFd /opt/CTFd
