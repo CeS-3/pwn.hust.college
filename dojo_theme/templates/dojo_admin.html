@@ -8,7 +8,7 @@
 </script>
 <div class="jumbotron">
     <div class="container">
-        <h1>道馆管理界面</h1>
+        <h1>{{ _("道馆管理界面") }}</h1>
         <br>
         <h2>{{ dojo.name }}</h2>
     </div>
@@ -20,7 +20,7 @@
         <figure>
           <a class="text-decoration-none" href="#" onclick="goBack()">
             <i class="fas fa-solid fa-arrow-left fa-3x"></i>
-            <figcaption><b style="font-family: 'Courier New', Courier, monospace" id="tooltip">&nbsp;返回&nbsp;</b></figcaption>
+            <figcaption><b style="font-family: 'Courier New', Courier, monospace" id="tooltip">&nbsp;{{ _("返回") }}&nbsp;</b></figcaption>
           </a>
         </figure>
       </div>
@@ -28,7 +28,7 @@
           <figure>
             <a class="text-decoration-none" href="{{ url_for('pwncollege_dojos.update_dojo', dojo=dojo.reference_id, update_code=dojo.update_code) }}" target="_blank">
               <i class="fas fa-upload fa-3x"></i>
-              <figcaption><b style="font-family: 'Courier New', Courier, monospace">更新</b></figcaption>
+              <figcaption><b style="font-family: 'Courier New', Courier, monospace">{{ _("更新") }}</b></figcaption>
             </a>
           </figure>
         </div>
@@ -37,7 +37,7 @@
           <figure>
             <a id="dojo-delete-button" class="text-decoration-none delete-link" href="#" data-dojo="{{ dojo.reference_id }}">
               <i class="fas fa-trash fa-3x"></i>
-              <figcaption><b style="font-family: 'Courier New', Courier, monospace">删除</b></figcaption>
+              <figcaption><b style="font-family: 'Courier New', Courier, monospace">{{ _("删除") }}</b></figcaption>
             </a>
           </figure>
         </div>
@@ -46,7 +46,7 @@
           <figure>
             <a id="dojo-invite-button" class="text-decoration-none" href="#" data-dojo="{{ url_for('pwncollege_dojos.join_dojo',dojo=dojo.reference_id,password=dojo.password)}}">
               <i class="fas fa-users fa-3x "></i>
-              <figcaption><b style="font-family: 'Courier New', Courier, monospace">邀请</b></figcaption>
+              <figcaption><b style="font-family: 'Courier New', Courier, monospace">{{ _("邀请") }}</b></figcaption>
             </a>
           </figure>
         </div>
@@ -55,7 +55,7 @@
           <figure>
             <a class="text-decoration-none" href="{{ url_for('pwncollege_dojos.view_dojo_solves', dojo=dojo.reference_id) }}">
               <i class="fas fa-file-csv fa-3x"></i>
-              <figcaption><b style="font-family: 'Courier New', Courier, monospace">解决方案</b></figcaption>
+              <figcaption><b style="font-family: 'Courier New', Courier, monospace">{{ _("解决方案") }}</b></figcaption>
             </a>
           </figure>
         </div>
@@ -64,7 +64,7 @@
             <figure>
               <a class="text-decoration-none" href="{{ url_for('course.view_all_grades', dojo=dojo.reference_id) }}">
                 <i class="fas fa-signal fa-3x"></i>
-                <figcaption><b style="font-family: 'Courier New', Courier, monospace">Grades</b></figcaption>
+                <figcaption><b style="font-family: 'Courier New', Courier, monospace">{{ _("成绩") }}</b></figcaption>
               </a>
             </figure>
           </div>
@@ -73,7 +73,7 @@
     <div>
       <form method="post" id="dojo-award-prune-form" autocomplete="off">
         <div class="form-group">
-          <input class="btn btn-mini btn-primary" id="_submit" name="_submit" type="submit" value="删除遗留道馆徽章">
+          <input class="btn btn-mini btn-primary" id="_submit" name="_submit" type="submit" value="{{ _('删除遗留道馆徽章') }}">
         </div>
         <div id="dojo-award-prune-results" class="form-group">
         </div>
@@ -81,28 +81,28 @@
       {% if is_admin() %}
       <form method="post" id="dojo-promote-dojo-form" autocomplete="off">
         <div class="form-group">
-          <input class="btn btn-mini btn-primary" id="_submit" name="_submit" type="submit" value="设置该道馆为官方道馆">
+          <input class="btn btn-mini btn-primary" id="_submit" name="_submit" type="submit" value="{{ _('设置该道馆为官方道馆') }}">
         </div>
         <div id="dojo-promote-dojo-results" class="form-group">
         </div>
       </form>
       {% endif %}
     </div>
-    <b style="font-family: 'Courier New', Courier, monospace">参考 ID: </b><code>{{ dojo.reference_id }}</code>
+    <b style="font-family: 'Courier New', Courier, monospace">{{ _("参考 ID: ") }}</b><code>{{ dojo.reference_id }}</code>
     <br>
-    <b style="font-family: 'Courier New', Courier, monospace">道馆 ID: </b><code>{{ dojo.hex_dojo_id }}</code>
+    <b style="font-family: 'Courier New', Courier, monospace">{{ _("道馆 ID: ") }}</b><code>{{ dojo.hex_dojo_id }}</code>
     <br>
-    <!-- <b style="font-family: 'Courier New', Courier, monospace">Update Code: </b><code>{{ dojo.update_code }}</code>
+    <!-- <b style="font-family: 'Courier New', Courier, monospace">{{ _("Update Code: ") }}</b><code>{{ dojo.update_code }}</code>
     <br> -->
-    <b style="font-family: 'Courier New', Courier, monospace">Git 哈希值: </b><code>{{ dojo.hash[:8] }}</code>
+    <b style="font-family: 'Courier New', Courier, monospace">{{ _("Git 哈希值: ") }}</b><code>{{ dojo.hash[:8] }}</code>
     <br>
-    <b style="font-family: 'Courier New', Courier, monospace">管理员</b>
+    <b style="font-family: 'Courier New', Courier, monospace">{{ _("管理员") }}</b>
     <ul>
         {% for admin in dojo.admins %}
             <li>{{ admin.user.name }}</li>
         {% endfor %}
     </ul>
-    <b style="font-family: 'Courier New', Courier, monospace">成员</b>
+    <b style="font-family: 'Courier New', Courier, monospace">{{ _("成员") }}</b>
     <form method="post" id="dojo-promote-admin-form" autocomplete="off">
       <div class="form-group">
         {% for member in dojo.members %}
@@ -110,7 +110,7 @@
         <label for="{{ member.user.id }}"><a href="{{ url_for('pwncollege_users.view_other', user_id=member.user.id) }}"><span id="name-for-{{member.user.id}}">{{ member.user.name }}</span></a></label>
         <br>
         {% endfor %}
-        <input class="btn btn-mini btn-primary" id="_submit" name="_submit" type="submit" value="晋升为管理员">
+        <input class="btn btn-mini btn-primary" id="_submit" name="_submit" type="submit" value="{{ _('晋升为管理员') }}">
       </div>
       <div id="dojo-promote-admin-results" class="form-group">
       </div>

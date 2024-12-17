@@ -5,7 +5,7 @@
 {% block content %}
 <div class="jumbotron">
     <div class="container">
-    <h2 class="row">请神奇宝贝训练家前往本道馆的前置神奇宝贝道馆学习与挑战！</h2>
+        <h2 class="row">{{ _("请神奇宝贝训练家前往本道馆的前置神奇宝贝道馆学习与挑战！") }}</h2>
     </div>
 </div>
 
@@ -18,7 +18,7 @@
 
   <br><br>
 
-  <h2 class="row">前置神奇宝贝道馆</h2>
+  <h2 class="row">{{ _("前置神奇宝贝道馆") }}</h2>
 
   <ul class="card-list">
     {% for dojo in prerequisite_dojo_sub %}
@@ -30,7 +30,7 @@
 </ul>
   <br><br>
 
-  <h2 class="row">道馆模块</h2>
+  <h2 class="row">{{ _("道馆模块") }}</h2>
   <br>
   <ul class="card-list">
     {% for module in dojo_locked.modules %}

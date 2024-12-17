@@ -26,21 +26,20 @@
 </style>
 {% endblock %}
 
-
 {% block content %}
 <div class="jumbotron">
   <div class="container">
-    <h1>课程</h1>
+    <h1>{{ _("课程") }}</h1>
   </div>
 </div>
 <div class="container">
   <div class="row">
     <div class="col-md-2 offset-md-1">
       <div class="nav flex-column nav-pills" role="tablist">
-        <a class="nav-link active" id="course-syllabus-tab" data-toggle="pill" href="#syllabus" role="tab">教学大纲</a>
+        <a class="nav-link active" id="course-syllabus-tab" data-toggle="pill" href="#syllabus" role="tab">{{ _("教学大纲") }}</a>
         {% if user %}
-          <a class="nav-link" id="course-grades-tab" data-toggle="pill" href="#grades" role="tab">成绩</a>
-          <a class="nav-link" id="course-identity-tab" data-toggle="pill" href="#identity" role="tab">身份信息</a>
+          <a class="nav-link" id="course-grades-tab" data-toggle="pill" href="#grades" role="tab">{{ _("成绩") }}</a>
+          <a class="nav-link" id="course-identity-tab" data-toggle="pill" href="#identity" role="tab">{{ _("身份信息") }}</a>
         {% endif %}
       </div>
     </div>
@@ -54,18 +53,18 @@
 
         {% if user %}
           <div class="tab-pane fade show" id="grades" role="tabpanel">
-            <h3>{{ name }} current grade in the class: <code style="font-size: 2em">{{ letter_grade }}</code> ({{ "%.2f%%" | format(100 * overall_grade) }})</h3>
+            <h3>{{ name }} {{ _("当前成绩") }}: <code style="font-size: 2em">{{ letter_grade }}</code> ({{ "%.2f%%" | format(100 * overall_grade) }})</h3>
             <br>
             <div id="grades" class="row">
               <div class="col-md-12">
                 <table class="table table-striped">
                   <thead>
                     <tr>
-                      <td scope="col"><b>姓名</b></td>
-                      <td scope="col"><b>日期</b></td>
-                      <td scope="col"><b>权重</b></td>
-                      <td scope="col"><b>进度</b></td>
-                      <td scope="col"><b>学分</b></td>
+                      <td scope="col"><b>{{ _("姓名") }}</b></td>
+                      <td scope="col"><b>{{ _("日期") }}</b></td>
+                      <td scope="col"><b>{{ _("权重") }}</b></td>
+                      <td scope="col"><b>{{ _("进度") }}</b></td>
+                      <td scope="col"><b>{{ _("学分") }}</b></td>
                     </tr>
                   </thead>
                   <tbody>
@@ -93,7 +92,7 @@
             <form method="post" id="identity-form" autocomplete="off">
               <div class="form-group">
                 <b><label for="enter-name">{{ identity_name }}</label></b>
-                <small class="form-text text-muted">这将共享给本道馆的所有管理员。</small>
+                <small class="form-text text-muted">{{ _("这将共享给本道馆的所有管理员。") }}</small>
                 <br>
                 <input class="form-control" id="identity" name="identity" type="text" value="{{ identity_value or '' }}">
               </div>

@@ -3,44 +3,44 @@
 {% block content %}
 <div class="jumbotron">
   <div class="container">
-    <h1>获得绶带的黑客榜单</h1>
+    <h1>{{ _("获得绶带的黑客榜单") }}</h1>
   </div>
 </div>
 <div class="container">
   <p>
-  黑客精神不仅仅是在大学课程中获得一个令人满意的分数。
-  真正的黑客永远不会满足于自己的知识水平。
-  他们努力，或者被不可抗拒地驱使着，实现对技术主题的绝对掌握。
+    {{ _("黑客精神不仅仅是在大学课程中获得一个令人满意的分数。") }}<br>
+    {{ _("真正的黑客永远不会满足于自己的知识水平。") }}<br>
+    {{ _("他们努力，或者被不可抗拒地驱使着，实现对技术主题的绝对掌握。") }}
   </p>
 
   <p>
-  下面是一份真正的黑客名单：
+    {{ _("下面是一份真正的黑客名单：") }}
   </p>
 
   {% for belt_color in ("blue", "purple", "green", "yellow", "orange", "white") %}
     <h2>
       <img src="{{ url_for("views.themes", path="img/dojo/" + belt_color + ".png") }}" alt="{{ belt_color }} belt" style="width: 50px;">
-    {% if belt_color == "blue" %}
-      大师级训练家 (Master Rank)
-    {% elif belt_color == "purple" %}
-      超级训练家 (Ultra Rank)
-    <!-- 很少有人能在最艰难的挑战面前坚持不懈，在最黑暗的夜晚继续前进。
+      {% if belt_color == "blue" %}
+        {{ _("大师级训练家 (Master Rank)") }}
+      {% elif belt_color == "purple" %}
+        {{ _("超级训练家 (Ultra Rank)") }}
+        <!-- 很少有人能在最艰难的挑战面前坚持不懈，在最黑暗的夜晚继续前进。
     下面的黑客们确实是最勇敢的，他们克服了无数看似不可能的挑战，证明了自己配得上在云中佩戴蓝带。 -->
-    {% elif belt_color == "green" %}
-    资深级训练家 (Veteran Rank)
-    <!-- 一棵树苗向着太阳生长，一名黑客出现在阳光中。
+      {% elif belt_color == "green" %}
+        {{ _("资深级训练家 (Veteran Rank)") }}
+        <!-- 一棵树苗向着太阳生长，一名黑客出现在阳光中。
     这些人表现出了一种独特的能力，能透过不确定性的阴霾看到更远处的清晰。
     他/她们已经准备好飞向天空。 -->
-    {% elif belt_color == "yellow" %}
-    专家级训练家 (Expert Rank)
-    <!-- 太阳升起照亮了天空。这些思想开放的学生正在承认一些鲜少有人怀疑存在的非凡的网络空间安全概念。阳光带来了成长的可能性和学习的希望。 -->
-    {% elif belt_color == "orange" %}
-    卓越级训练家 (Great Rank)
-    <!-- 黎明即将来临。
+      {% elif belt_color == "yellow" %}
+        {{ _("专家级训练家 (Expert Rank)") }}
+        <!-- 太阳升起照亮了天空。这些思想开放的学生正在承认一些鲜少有人怀疑存在的非凡的网络空间安全概念。阳光带来了成长的可能性和学习的希望。 -->
+      {% elif belt_color == "orange" %}
+        {{ _("卓越级训练家 (Great Rank)") }}
+        <!-- 黎明即将来临。
     下列同学不再是那些不了解网络安全的人了。相反，他们已然意识到，还有大量的网络安全空间安全概念尚未被探索，等待他们来发掘。 -->
-    {% elif belt_color == "white" %}
-    新手级 (Beginner Rank)
-    {% endif %}
+      {% elif belt_color == "white" %}
+        {{ _("新手级 (Beginner Rank)") }}
+      {% endif %}
     </h2>
     <p>
     </p>
@@ -73,10 +73,10 @@
     <br>
   {% endfor %}
 
-  <h2>如何登上上述榜单？</h2>
-  你也可以被列在上面的传说中。
-  你完全可以通过完成合适的 <a href="{{url_for("pwncollege_dojos.listing")}}">pwn.hust.college 平台中的道馆</a>来获得自己的绶带。
-  这需要技巧、狡猾和毅力，但你能做到。
-  祝你好运！
+  <h2>{{ _("如何登上上述榜单？") }}</h2>
+  {{ _("你也可以被列在上面的传说中。") }}<br>
+  {{ _("你完全可以通过完成合适的") }} <a href="{{ url_for("pwncollege_dojos.listing") }}">{{ _("pwn.hust.college 平台中的道馆") }}</a> {{ _("来获得自己的绶带。") }}<br>
+  {{ _("这需要技巧、狡猾和毅力，但你能做到。") }}<br>
+  {{ _("祝你好运！") }}
 </div>
 {% endblock %}

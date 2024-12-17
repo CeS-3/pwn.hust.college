@@ -3,23 +3,23 @@
 {% block content %}
 <div class="jumbotron">
   <div class="container">
-    <h1>All Dojos</h1>
+    <h1>{{ _("所有道馆") }}</h1>
   </div>
 </div>
 <div class="container">
     {% for dojo in dojos %}
     <h2><a href="{{ url_for('pwncollege_dojos.view_dojo', dojo=dojo.reference_id) }}">{{ dojo.name }}</a></h2>
-    <b>引用 ID：</b><code>{{ dojo.reference_id }}</code>
+    <b>{{ _("引用 ID：") }}</b><code>{{ dojo.reference_id }}</code>
     <br>
-    <b>道馆 ID：</b><code>{{ dojo.hex_dojo_id }}</code>
+    <b>{{ _("道馆 ID：") }}</b><code>{{ dojo.hex_dojo_id }}</code>
     <br>
-    <!-- <b style="font-family: 'Courier New', Courier, monospace">Update Code: </b><code>{{ dojo.update_code }}</code>
+    <!-- <b style="font-family: 'Courier New', Courier, monospace">{{ _("Update Code: ") }}</b><code>{{ dojo.update_code }}</code>
     <br> -->
-    <b>Git 哈希：</b><code>{{ dojo.hash[:8] }}</code>
+    <b>{{ _("Git 哈希：") }}</b><code>{{ dojo.hash[:8] }}</code>
     <br>
-    <b>上一次代码提交: </b><code>{{ dojo.last_commit_time }}</code>
+    <b>{{ _("上一次代码提交: ") }}</b><code>{{ dojo.last_commit_time }}</code>
     <br>
-    <b>管理员：</b>
+    <b>{{ _("管理员：") }}</b>
     <ul>
         {% for admin in dojo.admins %}
         <li>{{ admin.user.name }}</li>
