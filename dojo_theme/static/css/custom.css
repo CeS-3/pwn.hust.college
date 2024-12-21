@@ -1,5 +1,5 @@
 body {
-    background: #151515 url(../img/dojo/bkg.png) 0 0;
+    background: #fffdfd;
 }
 
 .modal-content {
@@ -7,11 +7,12 @@ body {
 }
 
 body, table, .form-control:focus, .close {
-    color: #eaeaea !important;
+    color: #000000 !important;
 }
 
 .navbar-brand, .nav-link, h1, h2, #syllabus h3, #syllabus h4, .navbar-pulldown {
-    color: #b5e853 !important;
+    color: #4A17AC !important;
+    font-weight: bold !important;
 }
 
 .navbar > .container {
@@ -19,7 +20,7 @@ body, table, .form-control:focus, .close {
 }
 
 a {
-    color: #63c0f5;
+    color: #f02a2a;
     text-shadow: 0 0 5px rgba(104,182,255,0.15);
 }
 
@@ -28,7 +29,7 @@ a:hover {
 }
 
 nav {
-    border-bottom: 1px dashed #b5e853;
+    border-bottom: 1px dashed #ff0000;
 }
 
 h4 {
@@ -181,7 +182,7 @@ h4 {
     transform: translate(-50%, -50%);
     width: 100%;
     top: 85%;
-    color: rgb(234, 234, 234);
+    color: rgb(255, 0, 0);
     font-size: 0.75em;
 }
 
@@ -226,7 +227,7 @@ h4 {
 
 .challenge-solved {
     -webkit-text-stroke: 1px #222;
-    -webkit-text-fill-color: #b5e853;
+    -webkit-text-fill-color: #29d11a;
 }
 
 .challenge-unsolved {
@@ -295,7 +296,7 @@ table {
 
 th {
   text-align: left;
-  border-bottom: 1px dashed #b5e853;
+  border-bottom: 1px dashed #1900ff;
   padding: 5px 10px;
 }
 
@@ -306,12 +307,12 @@ td {
 hr {
   height: 0;
   border: 0;
-  border-bottom: 1px dashed #b5e853;
-  color: #b5e853;
+  border-bottom: 1px dashed #2200ff;
+  color: #ea00ff;
 }
 
 .module-dojo a {
-    color: #b5e853 !important;
+    color: #fff700 !important;
 }
 
 .module-checkpoint-due-date, .module-due-date {
