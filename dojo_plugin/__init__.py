@@ -4,7 +4,8 @@ import datetime
 from email.message import EmailMessage
 from email.utils import formatdate
 from urllib.parse import urlparse, urlunparse
-
+from flask_babel import Babel, gettext as _
+from flask import request, redirect, url_for, make_response
 from flask import Response, request, redirect
 from flask.json import JSONEncoder
 from itsdangerous.exc import BadSignature
@@ -149,3 +150,35 @@ def load(app):
         bootstrap()
 
     app.shell_context_processor(shell_context_processor)
+    
+    app.config['BABEL_DEFAULT_LOCALE'] = 'zh'
+
+    app.config['LANGUAGES'] = {
+        'zh': '中文',
+        'en': 'English'
+    }
+
+    app.config["BABEL_TRANSLATION_DIRECTORIES"] = os.path.join(os.path.dirname(__file__), 'translations')
+    babel = Babel(app)
+
+    @app.route('/set_language')
+    def set_language():
+        # 获取当前语言
+        current_locale = request.cookies.get('locale', 'en')
+        
+        # 切换到另一种语言
+        next_locale = 'en' if current_locale == 'zh' else 'zh'
+        
+        # 设置语言选择到 Cookie
+        response = make_response(redirect(request.referrer or url_for('index')))
+        response.set_cookie('locale', next_locale, max_age=60 * 60 * 24 * 30)  # 保存 30 天
+        return response
+    
+    @babel.localeselector
+    def get_locale():
+        user_locale = request.cookies.get('locale')
+        if user_locale:
+            return user_locale
+
+        return request.accept_languages.best_match(["en", "zh"])
+

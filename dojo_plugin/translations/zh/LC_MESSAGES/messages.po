@@ -1,0 +1,1074 @@
+# Chinese translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-01-22 11:46+0800\n"
+"PO-Revision-Date: 2025-01-22 15:09+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: dojo_theme/templates/admin_desktops.html:6
+msgid "可连接的用户桌面会话"
+msgstr "可连接的用户桌面会话"
+
+#: dojo_theme/templates/admin_desktops.html:15
+msgid "桌面会话"
+msgstr "桌面会话"
+
+#: dojo_theme/templates/admin_dojos.html:6
+msgid "所有道馆"
+msgstr "所有道馆"
+
+#: dojo_theme/templates/admin_dojos.html:12
+msgid "引用 ID："
+msgstr "引用 ID："
+
+#: dojo_theme/templates/admin_dojos.html:14
+msgid "道馆 ID："
+msgstr "道馆 ID："
+
+#: dojo_theme/templates/admin_dojos.html:16
+#: dojo_theme/templates/dojo_admin.html:95
+msgid "Update Code: "
+msgstr "Update Code: "
+
+#: dojo_theme/templates/admin_dojos.html:18
+msgid "Git 哈希："
+msgstr "Git 哈希："
+
+#: dojo_theme/templates/admin_dojos.html:20
+msgid "上一次代码提交: "
+msgstr "上一次代码提交: "
+
+#: dojo_theme/templates/admin_dojos.html:22
+msgid "管理员："
+msgstr "管理员："
+
+#: dojo_theme/templates/belts.html:6
+msgid "获得绶带的黑客榜单"
+msgstr "获得绶带的黑客榜单"
+
+#: dojo_theme/templates/belts.html:11
+msgid "黑客精神不仅仅是在大学课程中获得一个令人满意的分数。"
+msgstr "黑客精神不仅仅是在大学课程中获得一个令人满意的分数。"
+
+#: dojo_theme/templates/belts.html:12
+msgid "真正的黑客永远不会满足于自己的知识水平。"
+msgstr "真正的黑客永远不会满足于自己的知识水平。"
+
+#: dojo_theme/templates/belts.html:13
+msgid "他们努力，或者被不可抗拒地驱使着，实现对技术主题的绝对掌握。"
+msgstr "他们努力，或者被不可抗拒地驱使着，实现对技术主题的绝对掌握。"
+
+#: dojo_theme/templates/belts.html:17
+msgid "下面是一份真正的黑客名单："
+msgstr "下面是一份真正的黑客名单："
+
+#: dojo_theme/templates/belts.html:24
+msgid "大师级训练家 (Master Rank)"
+msgstr "大师级训练家 (Master Rank)"
+
+#: dojo_theme/templates/belts.html:26
+msgid "超级训练家 (Ultra Rank)"
+msgstr "超级训练家 (Ultra Rank)"
+
+#: dojo_theme/templates/belts.html:30
+msgid "资深级训练家 (Veteran Rank)"
+msgstr "资深级训练家 (Veteran Rank)"
+
+#: dojo_theme/templates/belts.html:35
+msgid "专家级训练家 (Expert Rank)"
+msgstr "专家级训练家 (Expert Rank)"
+
+#: dojo_theme/templates/belts.html:38
+msgid "卓越级训练家 (Great Rank)"
+msgstr "卓越级训练家 (Great Rank)"
+
+#: dojo_theme/templates/belts.html:42
+msgid "新手级 (Beginner Rank)"
+msgstr "新手级 (Beginner Rank)"
+
+#: dojo_theme/templates/belts.html:76
+msgid "如何登上上述榜单？"
+msgstr "如何登上上述榜单？"
+
+#: dojo_theme/templates/belts.html:77
+msgid "你也可以被列在上面的传说中。"
+msgstr "你也可以被列在上面的传说中。"
+
+#: dojo_theme/templates/belts.html:78
+msgid "你完全可以通过完成合适的"
+msgstr "你完全可以通过完成合适的"
+
+#: dojo_theme/templates/belts.html:78
+msgid "pwn.hust.college 平台中的道馆"
+msgstr "pwn.hust.college 平台中的道馆"
+
+#: dojo_theme/templates/belts.html:78
+msgid "来获得自己的绶带。"
+msgstr "来获得自己的绶带。"
+
+#: dojo_theme/templates/belts.html:79
+msgid "这需要技巧、狡猾和毅力，但你能做到。"
+msgstr "这需要技巧、狡猾和毅力，但你能做到。"
+
+#: dojo_theme/templates/belts.html:80
+msgid "祝你好运！"
+msgstr "祝你好运！"
+
+#: dojo_theme/templates/course.html:32 dojo_theme/templates/dojo.html:38
+#: dojo_theme/templates/dojos.html:22 dojo_theme/templates/index.html:95
+#: dojo_theme/templates/index.html:172
+msgid "课程"
+msgstr "课程"
+
+#: dojo_theme/templates/course.html:39
+msgid "教学大纲"
+msgstr "教学大纲"
+
+#: dojo_theme/templates/course.html:41 dojo_theme/templates/dojo_admin.html:67
+msgid "成绩"
+msgstr "成绩"
+
+#: dojo_theme/templates/course.html:42
+msgid "身份信息"
+msgstr "身份信息"
+
+#: dojo_theme/templates/course.html:56
+msgid "当前成绩"
+msgstr "当前成绩"
+
+#: dojo_theme/templates/course.html:63
+msgid "姓名"
+msgstr "姓名"
+
+#: dojo_theme/templates/course.html:64
+msgid "日期"
+msgstr "日期"
+
+#: dojo_theme/templates/course.html:65
+msgid "权重"
+msgstr "权重"
+
+#: dojo_theme/templates/course.html:66
+msgid "进度"
+msgstr "进度"
+
+#: dojo_theme/templates/course.html:67
+msgid "学分"
+msgstr "学分"
+
+#: dojo_theme/templates/course.html:95
+msgid "这将共享给本道馆的所有管理员。"
+msgstr "这将共享给本道馆的所有管理员。"
+
+#: dojo_theme/templates/dojo.html:17 dojo_theme/templates/dojo_admin.html:99
+msgid "管理员"
+msgstr "管理员"
+
+#: dojo_theme/templates/dojo.html:25
+msgid "道馆简介"
+msgstr "道馆简介"
+
+#: dojo_theme/templates/dojo.html:50
+msgid "道馆奖项"
+msgstr "道馆奖项"
+
+#: dojo_theme/templates/dojo.html:56
+msgid "道馆状态"
+msgstr "道馆状态"
+
+#: dojo_theme/templates/dojo.html:60
+msgid "目前解决"
+msgstr "目前解决"
+
+#: dojo_theme/templates/dojo.html:62
+#: dojo_theme/templates/macros/scoreboard.html:16
+msgid "黑客"
+msgstr "黑客"
+
+#: dojo_theme/templates/dojo.html:64
+msgid "关卡"
+msgstr "关卡"
+
+#: dojo_theme/templates/dojo.html:66 dojo_theme/templates/dojo_admin.html:58
+msgid "解决方案"
+msgstr "解决方案"
+
+#: dojo_theme/templates/dojo.html:72 dojo_theme/templates/dojo_error.html:33
+msgid "道馆模块"
+msgstr "道馆模块"
+
+#: dojo_theme/templates/dojo.html:95
+msgid "道馆排名"
+msgstr "道馆排名"
+
+#: dojo_theme/templates/dojo_admin.html:11
+msgid "道馆管理界面"
+msgstr "道馆管理界面"
+
+#: dojo_theme/templates/dojo_admin.html:23
+msgid "返回"
+msgstr "返回"
+
+#: dojo_theme/templates/dojo_admin.html:31
+msgid "更新"
+msgstr "更新"
+
+#: dojo_theme/templates/dojo_admin.html:40
+msgid "删除"
+msgstr "删除"
+
+#: dojo_theme/templates/dojo_admin.html:49
+msgid "邀请"
+msgstr "邀请"
+
+#: dojo_theme/templates/dojo_admin.html:76
+msgid "删除遗留道馆徽章"
+msgstr "删除遗留道馆徽章"
+
+#: dojo_theme/templates/dojo_admin.html:84
+msgid "设置该道馆为官方道馆"
+msgstr "设置该道馆为官方道馆"
+
+#: dojo_theme/templates/dojo_admin.html:91
+msgid "参考 ID: "
+msgstr "参考 ID: "
+
+#: dojo_theme/templates/dojo_admin.html:93
+msgid "道馆 ID: "
+msgstr "道馆 ID: "
+
+#: dojo_theme/templates/dojo_admin.html:97
+msgid "Git 哈希值: "
+msgstr "Git 哈希值: "
+
+#: dojo_theme/templates/dojo_admin.html:105
+msgid "成员"
+msgstr "成员"
+
+#: dojo_theme/templates/dojo_admin.html:113
+msgid "晋升为管理员"
+msgstr "晋升为管理员"
+
+#: dojo_theme/templates/dojo_create.html:7
+msgid "创建道馆"
+msgstr "创建道馆"
+
+#: dojo_theme/templates/dojo_create.html:13
+msgid "pwn.hust.college 的道场是在一个 git 仓库中定义的。您可以使用下面列出的示例仓库，或者我们的"
+msgstr "pwn.hust.college 的道场是在一个 git 仓库中定义的。您可以使用下面列出的示例仓库，或者我们的"
+
+#: dojo_theme/templates/dojo_create.html:14
+msgid "官方道馆仓库"
+msgstr "官方道馆仓库"
+
+#: dojo_theme/templates/dojo_create.html:15
+msgid "作为构建道馆的示例！"
+msgstr "作为构建道馆的示例！"
+
+#: dojo_theme/templates/dojo_create.html:27
+msgid "当您准备好后，填写下面的表单从您的仓库创建您的道馆！"
+msgstr "当您准备好后，填写下面的表单从您的仓库创建您的道馆！"
+
+#: dojo_theme/templates/dojo_create.html:30
+msgid "Git 仓库"
+msgstr "Git 仓库"
+
+#: dojo_theme/templates/dojo_create.html:33
+msgid "选择 Git 仓库类型："
+msgstr "选择 Git 仓库类型："
+
+#: dojo_theme/templates/dojo_create.html:51
+msgid "部署秘钥"
+msgstr "部署秘钥"
+
+#: dojo_theme/templates/dojo_create.html:54
+msgid "Github 私库必需："
+msgstr "Github 私库必需："
+
+#: dojo_theme/templates/dojo_create.html:55
+#: dojo_theme/templates/dojo_create.html:59
+msgid "部署秘钥文档"
+msgstr "部署秘钥文档"
+
+#: dojo_theme/templates/dojo_create.html:58
+msgid "Gitee 私库必需："
+msgstr "Gitee 私库必需："
+
+#: dojo_theme/templates/dojo_create.html:81
+msgid "创建"
+msgstr "创建"
+
+#: dojo_theme/templates/dojo_error.html:8
+msgid "请神奇宝贝训练家前往本道馆的前置神奇宝贝道馆学习与挑战！"
+msgstr "请神奇宝贝训练家前往本道馆的前置神奇宝贝道馆学习与挑战！"
+
+#: dojo_theme/templates/dojo_error.html:21
+msgid "前置神奇宝贝道馆"
+msgstr "前置神奇宝贝道馆"
+
+#: dojo_theme/templates/dojos.html:7 dojo_theme/templates/index.html:61
+msgid "神奇宝贝道馆"
+msgstr "神奇宝贝道馆"
+
+#: dojo_theme/templates/dojos.html:9
+msgid "怀揣着成为神奇宝贝大师的梦想，新手训练家们将要开展自己的旅程，在"
+msgstr "怀揣着成为神奇宝贝大师的梦想，新手训练家们将要开展自己的旅程，在"
+
+#: dojo_theme/templates/dojos.html:9
+msgid "平台上挑战各个城市的神奇宝贝道馆，战胜馆主后获得 8 枚道馆徽章，并获得神奇宝贝联盟大会的参赛资格。"
+msgstr "平台上挑战各个城市的神奇宝贝道馆，战胜馆主后获得 8 枚道馆徽章，并获得神奇宝贝联盟大会的参赛资格。"
+
+#: dojo_theme/templates/dojos.html:16 dojo_theme/templates/index.html:35
+#: dojo_theme/templates/index.html:38 dojo_theme/templates/index.html:45
+#: dojo_theme/templates/index.html:56
+msgid "入门篇"
+msgstr "入门篇"
+
+#: dojo_theme/templates/dojos.html:17
+msgid "在开展神奇宝贝道馆挑战前，新手训练家们需要在真新镇的大木博士研究所获得初始神奇宝贝，神奇宝贝图鉴，神奇宝贝球等物资。"
+msgstr "在开展神奇宝贝道馆挑战前，新手训练家们需要在真新镇的大木博士研究所获得初始神奇宝贝，神奇宝贝图鉴，神奇宝贝球等物资。"
+
+#: dojo_theme/templates/dojos.html:19
+msgid "工具篇"
+msgstr "工具篇"
+
+#: dojo_theme/templates/dojos.html:20
+msgid "工欲善其事必先利其器。我们提供了多种新手训练家门需要的工具学习课程，例如如何使用神器宝贝图鉴，如何使用神奇宝贝球，如何收服神奇宝贝等。"
+msgstr "工欲善其事必先利其器。我们提供了多种新手训练家门需要的工具学习课程，例如如何使用神器宝贝图鉴，如何使用神奇宝贝球，如何收服神奇宝贝等。"
+
+#: dojo_theme/templates/dojos.html:23
+msgid "我们在平台上提供了众多课程，包含系统安全、系统安全实验、软件安全、软件安全实验等。"
+msgstr "我们在平台上提供了众多课程，包含系统安全、系统安全实验、软件安全、软件安全实验等。"
+
+#: dojo_theme/templates/dojos.html:25 dojo_theme/templates/index.html:83
+msgid "初级篇"
+msgstr "初级篇"
+
+#: dojo_theme/templates/dojos.html:26 dojo_theme/templates/dojos.html:29
+#: dojo_theme/templates/dojos.html:32
+msgid "以下道馆构成了"
+msgstr "以下道馆构成了"
+
+#: dojo_theme/templates/dojos.html:26
+msgid "平台初级篇的主要课程内容，完成关卡后你可以获得"
+msgstr "平台初级篇的主要课程内容，完成关卡后你可以获得"
+
+#: dojo_theme/templates/dojos.html:26 dojo_theme/templates/dojos.html:29
+#: dojo_theme/templates/dojos.html:32 dojo_theme/templates/index.html:100
+#: dojo_theme/templates/index.html:177
+#: dojo_theme/templates/macros/scoreboard.html:17
+msgid "徽章"
+msgstr "徽章"
+
+#: dojo_theme/templates/dojos.html:26 dojo_theme/templates/dojos.html:29
+#: dojo_theme/templates/dojos.html:32
+msgid "奖励。建议按照顺序进行学习，祝你好运！"
+msgstr "奖励。建议按照顺序进行学习，祝你好运！"
+
+#: dojo_theme/templates/dojos.html:28 dojo_theme/templates/index.html:159
+msgid "中级篇"
+msgstr "中级篇"
+
+#: dojo_theme/templates/dojos.html:29
+msgid "平台中级篇的主要课程内容，完成关卡后你可以获得"
+msgstr "平台中级篇的主要课程内容，完成关卡后你可以获得"
+
+#: dojo_theme/templates/dojos.html:31 dojo_theme/templates/index.html:238
+msgid "高级篇"
+msgstr "高级篇"
+
+#: dojo_theme/templates/dojos.html:32
+msgid "平台高级篇的主要课程内容，完成关卡后你可以获得"
+msgstr "平台高级篇的主要课程内容，完成关卡后你可以获得"
+
+#: dojo_theme/templates/dojos.html:34
+msgid "归档"
+msgstr "归档"
+
+#: dojo_theme/templates/dojos.html:35
+msgid "历史道馆"
+msgstr "历史道馆"
+
+#: dojo_theme/templates/hacker.html:111
+msgid "首次成功提交时间："
+msgstr "首次成功提交时间："
+
+#: dojo_theme/templates/iframe.html:42
+msgid "没有开启的挑战关卡会话；请开启一个挑战关卡！"
+msgstr "没有开启的挑战关卡会话；请开启一个挑战关卡！"
+
+#: dojo_theme/templates/index.html:10
+msgid "未知攻，焉知防！"
+msgstr "未知攻，焉知防！"
+
+#: dojo_theme/templates/index.html:11
+msgid "实践出真知！"
+msgstr "实践出真知！"
+
+#: dojo_theme/templates/index.html:16
+msgid "欢迎来到 pwn.hust.college"
+msgstr "欢迎来到 pwn.hust.college"
+
+#: dojo_theme/templates/index.html:18
+msgid "是一个基于神奇宝贝动画设计的CTF趣味教育平台，供学生团体学习和动手实践网络空间安全的核心概念。同学们化身为神奇宝贝训练家，通过挑战神奇宝贝道馆实践理论课堂中的网络空间安全核心攻防技术，获取相应道馆徽章，并最终成长为技术娴熟的白帽黑客。我们平台的设计理念为"
+msgstr "是一个基于神奇宝贝动画设计的CTF趣味教育平台，供学生团体学习和动手实践网络空间安全的核心概念。同学们化身为神奇宝贝训练家，通过挑战神奇宝贝道馆实践理论课堂中的网络空间安全核心攻防技术，获取相应道馆徽章，并最终成长为技术娴熟的白帽黑客。我们平台的设计理念为"
+
+#: dojo_theme/templates/index.html:18
+msgid "未知攻，焉知防"
+msgstr "未知攻，焉知防"
+
+#: dojo_theme/templates/index.html:18
+msgid "与"
+msgstr "与"
+
+#: dojo_theme/templates/index.html:18
+msgid "实践出真知"
+msgstr "实践出真知"
+
+#: dojo_theme/templates/index.html:18
+msgid "旨在让同学们在神奇宝贝道馆挑战中动手实践网络空间安全攻防的理论知识。"
+msgstr "旨在让同学们在神奇宝贝道馆挑战中动手实践网络空间安全攻防的理论知识。"
+
+#: dojo_theme/templates/index.html:22
+msgid "本平台由华中科技大学网络空间安全学院的出色"
+msgstr "本平台由华中科技大学网络空间安全学院的出色"
+
+#: dojo_theme/templates/index.html:22
+msgid "白帽黑客团队"
+msgstr "白帽黑客团队"
+
+#: dojo_theme/templates/index.html:22
+msgid "维护。目前该平台支撑网安学院的软件安全理论课程与实践课程，且免费开源。"
+msgstr "维护。目前该平台支撑网安学院的软件安全理论课程与实践课程，且免费开源。"
+
+#: dojo_theme/templates/index.html:26
+msgid "如果你有任何意见，建议和反馈，请通过"
+msgstr "如果你有任何意见，建议和反馈，请通过"
+
+#: dojo_theme/templates/index.html:26 dojo_theme/templates/index.html:273
+msgid "邮箱"
+msgstr "邮箱"
+
+#: dojo_theme/templates/index.html:26
+msgid "联系我们！"
+msgstr "联系我们！"
+
+#: dojo_theme/templates/index.html:38
+msgid "在开展正式道馆挑战之前，各位神奇宝贝训练家需要完成"
+msgstr "在开展正式道馆挑战之前，各位神奇宝贝训练家需要完成"
+
+#: dojo_theme/templates/index.html:38
+msgid "学习，才能从真新镇大木博士研究所获得神奇宝贝图鉴、神奇宝贝球等。开始学习吧，各位神奇宝贝训练家！"
+msgstr "学习，才能从真新镇大木博士研究所获得神奇宝贝图鉴、神奇宝贝球等。开始学习吧，各位神奇宝贝训练家！"
+
+#: dojo_theme/templates/index.html:46
+msgid "就决定是你了，皮卡丘!"
+msgstr "就决定是你了，皮卡丘!"
+
+#: dojo_theme/templates/index.html:56
+msgid "一旦你完成"
+msgstr "一旦你完成"
+
+#: dojo_theme/templates/index.html:56
+msgid "学习，便可以挑战基础篇中各种充满各种软件安全知识的神奇宝贝道馆。当你在学习和挑战过程中遇到问题，可以向"
+msgstr "学习，便可以挑战基础篇中各种充满各种软件安全知识的神奇宝贝道馆。当你在学习和挑战过程中遇到问题，可以向"
+
+#: dojo_theme/templates/index.html:56
+msgid "大模型助手"
+msgstr "大模型助手"
+
+#: dojo_theme/templates/index.html:56
+msgid "提问或在"
+msgstr "提问或在"
+
+#: dojo_theme/templates/index.html:56
+msgid "Kook 服务器频道"
+msgstr "Kook 服务器频道"
+
+#: dojo_theme/templates/index.html:56
+msgid "中寻找帮助。当然，"
+msgstr "中寻找帮助。当然，"
+
+#: dojo_theme/templates/index.html:56
+msgid "也是一个同其他神奇宝贝训练家交流经验和心得的地方。"
+msgstr "也是一个同其他神奇宝贝训练家交流经验和心得的地方。"
+
+#: dojo_theme/templates/index.html:64
+msgid "在开展正式道馆挑战之前，我们先来介绍一下神奇宝贝道馆。每个神奇宝贝道馆都有一位馆主及其独特属性的神奇宝贝，同学们需要通关道馆挑战关卡，击败道馆馆主才能获得道馆徽章。"
+msgstr "在开展正式道馆挑战之前，我们先来介绍一下神奇宝贝道馆。每个神奇宝贝道馆都有一位馆主及其独特属性的神奇宝贝，同学们需要通关道馆挑战关卡，击败道馆馆主才能获得道馆徽章。"
+
+#: dojo_theme/templates/index.html:64
+msgid "注意"
+msgstr "注意"
+
+#: dojo_theme/templates/index.html:64
+msgid "，只有集齐 8 枚徽章的神奇宝贝训练家才能参加最终的神奇宝贝联盟大会。加油吧，各位神奇宝贝训练家！"
+msgstr "，只有集齐 8 枚徽章的神奇宝贝训练家才能参加最终的神奇宝贝联盟大会。加油吧，各位神奇宝贝训练家！"
+
+#: dojo_theme/templates/index.html:69
+msgid "徽章（Badge）"
+msgstr "徽章（Badge）"
+
+#: dojo_theme/templates/index.html:71
+msgid "徽章作为神奇宝贝训练家通过道馆馆主考验的标志，是同学们参加神奇宝贝联盟大会的入场券，同时，也是神奇宝贝训练家的实力象征。为了激励大家学习热情，"
+msgstr "徽章作为神奇宝贝训练家通过道馆馆主考验的标志，是同学们参加神奇宝贝联盟大会的入场券，同时，也是神奇宝贝训练家的实力象征。为了激励大家学习热情，"
+
+#: dojo_theme/templates/index.html:71
+msgid "我们将制作好真实的道馆徽章，发放给完成道馆挑战的神奇宝贝训练家。"
+msgstr "我们将制作好真实的道馆徽章，发放给完成道馆挑战的神奇宝贝训练家。"
+
+#: dojo_theme/templates/index.html:76
+msgid "如何获得真实道馆徽章？"
+msgstr "如何获得真实道馆徽章？"
+
+#: dojo_theme/templates/index.html:78
+msgid "一旦你完成所有必需的挑战关卡在平台中获得道馆徽章，你可以通过"
+msgstr "一旦你完成所有必需的挑战关卡在平台中获得道馆徽章，你可以通过"
+
+#: dojo_theme/templates/index.html:78
+msgid "平台注册账号的关联邮件账号"
+msgstr "平台注册账号的关联邮件账号"
+
+#: dojo_theme/templates/index.html:78 dojo_theme/templates/register.html:23
+msgid "发送邮件"
+msgstr "发送邮件"
+
+#: dojo_theme/templates/index.html:78
+msgid "给我们，获取真实徽章！"
+msgstr "给我们，获取真实徽章！"
+
+#: dojo_theme/templates/index.html:85
+msgid "初级篇包含 4 个初级神奇宝贝道馆，分别是"
+msgstr "初级篇包含 4 个初级神奇宝贝道馆，分别是"
+
+#: dojo_theme/templates/index.html:85
+msgid "深灰道馆，华蓝道馆，枯叶道馆，金黄道馆"
+msgstr "深灰道馆，华蓝道馆，枯叶道馆，金黄道馆"
+
+#: dojo_theme/templates/components/navbar.html:18
+#: dojo_theme/templates/index.html:96 dojo_theme/templates/index.html:173
+msgid "道馆"
+msgstr "道馆"
+
+#: dojo_theme/templates/index.html:97 dojo_theme/templates/index.html:174
+msgid "知识点"
+msgstr "知识点"
+
+#: dojo_theme/templates/index.html:98 dojo_theme/templates/index.html:175
+msgid "馆主"
+msgstr "馆主"
+
+#: dojo_theme/templates/index.html:99 dojo_theme/templates/index.html:176
+msgid "宝可梦"
+msgstr "宝可梦"
+
+#: dojo_theme/templates/index.html:110
+msgid "深灰道馆"
+msgstr "深灰道馆"
+
+#: dojo_theme/templates/index.html:112
+msgid "小刚"
+msgstr "小刚"
+
+#: dojo_theme/templates/index.html:114
+msgid "小刚的小拳石"
+msgstr "小刚的小拳石"
+
+#: dojo_theme/templates/index.html:115
+msgid "小刚的大岩蛇"
+msgstr "小刚的大岩蛇"
+
+#: dojo_theme/templates/index.html:117
+msgid "灰色徽章"
+msgstr "灰色徽章"
+
+#: dojo_theme/templates/index.html:120
+msgid "华蓝道馆"
+msgstr "华蓝道馆"
+
+#: dojo_theme/templates/index.html:122
+msgid "小霞"
+msgstr "小霞"
+
+#: dojo_theme/templates/index.html:124
+msgid "小霞的海星星"
+msgstr "小霞的海星星"
+
+#: dojo_theme/templates/index.html:125
+msgid "小霞的宝石海星"
+msgstr "小霞的宝石海星"
+
+#: dojo_theme/templates/index.html:127
+msgid "蓝色徽章"
+msgstr "蓝色徽章"
+
+#: dojo_theme/templates/index.html:130
+msgid "枯叶道馆"
+msgstr "枯叶道馆"
+
+#: dojo_theme/templates/index.html:132
+msgid "马志士"
+msgstr "马志士"
+
+#: dojo_theme/templates/index.html:134
+msgid "马志士的雷丘"
+msgstr "马志士的雷丘"
+
+#: dojo_theme/templates/index.html:136
+msgid "橙色徽章"
+msgstr "橙色徽章"
+
+#: dojo_theme/templates/index.html:139
+msgid "金黄道馆"
+msgstr "金黄道馆"
+
+#: dojo_theme/templates/index.html:141
+msgid "娜姿"
+msgstr "娜姿"
+
+#: dojo_theme/templates/index.html:143
+msgid "娜姿的凯西"
+msgstr "娜姿的凯西"
+
+#: dojo_theme/templates/index.html:145
+msgid "娜姿的勇基拉"
+msgstr "娜姿的勇基拉"
+
+#: dojo_theme/templates/index.html:147
+msgid "金色徽章"
+msgstr "金色徽章"
+
+#: dojo_theme/templates/index.html:162
+msgid "中级篇包含 4 个中级神奇宝贝道馆，分别是"
+msgstr "中级篇包含 4 个中级神奇宝贝道馆，分别是"
+
+#: dojo_theme/templates/index.html:162
+msgid "玉虹道馆，浅红道馆，红莲道馆，常青道馆"
+msgstr "玉虹道馆，浅红道馆，红莲道馆，常青道馆"
+
+#: dojo_theme/templates/index.html:187
+msgid "玉虹道馆"
+msgstr "玉虹道馆"
+
+#: dojo_theme/templates/index.html:189
+msgid "莉佳"
+msgstr "莉佳"
+
+#: dojo_theme/templates/index.html:191
+msgid "蔓藤怪"
+msgstr "蔓藤怪"
+
+#: dojo_theme/templates/index.html:192
+msgid "口呆花"
+msgstr "口呆花"
+
+#: dojo_theme/templates/index.html:193
+msgid "臭臭花"
+msgstr "臭臭花"
+
+#: dojo_theme/templates/index.html:195
+msgid "彩虹徽章"
+msgstr "彩虹徽章"
+
+#: dojo_theme/templates/index.html:198
+msgid "浅红道馆"
+msgstr "浅红道馆"
+
+#: dojo_theme/templates/index.html:200
+msgid "阿桔"
+msgstr "阿桔"
+
+#: dojo_theme/templates/index.html:202
+msgid "阿桔#毛球"
+msgstr "阿桔#毛球"
+
+#: dojo_theme/templates/index.html:204
+msgid "阿桔#摩鲁蛾"
+msgstr "阿桔#摩鲁蛾"
+
+#: dojo_theme/templates/index.html:206
+msgid "粉红徽章"
+msgstr "粉红徽章"
+
+#: dojo_theme/templates/index.html:209
+msgid "红莲道馆"
+msgstr "红莲道馆"
+
+#: dojo_theme/templates/index.html:211
+msgid "夏伯"
+msgstr "夏伯"
+
+#: dojo_theme/templates/index.html:213
+msgid "夏伯#钻角犀兽"
+msgstr "夏伯#钻角犀兽"
+
+#: dojo_theme/templates/index.html:214
+msgid "夏伯#鸭嘴火兽"
+msgstr "夏伯#鸭嘴火兽"
+
+#: dojo_theme/templates/index.html:216
+msgid "深红徽章"
+msgstr "深红徽章"
+
+#: dojo_theme/templates/index.html:219
+msgid "常青道馆"
+msgstr "常青道馆"
+
+#: dojo_theme/templates/index.html:221
+msgid "坂木"
+msgstr "坂木"
+
+#: dojo_theme/templates/index.html:223
+msgid "坂木（动画）#怪力"
+msgstr "坂木（动画）#怪力"
+
+#: dojo_theme/templates/index.html:224
+msgid "坂木（动画）#巨钳蟹（×2）"
+msgstr "坂木（动画）#巨钳蟹（×2）"
+
+#: dojo_theme/templates/index.html:225
+msgid "坂木（动画）#钻角犀兽"
+msgstr "坂木（动画）#钻角犀兽"
+
+#: dojo_theme/templates/index.html:227
+msgid "绿色徽章"
+msgstr "绿色徽章"
+
+#: dojo_theme/templates/index.html:241
+msgid ""
+"神奇宝贝联盟大会（Pokémon League "
+"Conference）是宝可梦动画中的宝可梦联盟比赛，在每个地区都有例行性的举办。若要取得参赛资格，通常要在联盟举办前，取得当地 8 "
+"枚以上的道馆徽章。"
+msgstr ""
+"神奇宝贝联盟大会（Pokémon League "
+"Conference）是宝可梦动画中的宝可梦联盟比赛，在每个地区都有例行性的举办。若要取得参赛资格，通常要在联盟举办前，取得当地 8 "
+"枚以上的道馆徽章。"
+
+#: dojo_theme/templates/index.html:246
+msgid "合作与通关（Writeup）政策"
+msgstr "合作与通关（Writeup）政策"
+
+#: dojo_theme/templates/index.html:249
+msgid "创建的挑战关卡是教育素材，用于给华科网安学院的学生评分。因此，我们希望不要在互联网上发布这些挑战关卡的通关攻略、讲解视频和直播。显然，我们无法阻止你在互联网上发布内容，但我们努力使所有这些内容都变成公开的，我们希望你可以帮忙使"
+msgstr "创建的挑战关卡是教育素材，用于给华科网安学院的学生评分。因此，我们希望不要在互联网上发布这些挑战关卡的通关攻略、讲解视频和直播。显然，我们无法阻止你在互联网上发布内容，但我们努力使所有这些内容都变成公开的，我们希望你可以帮忙使"
+
+#: dojo_theme/templates/index.html:249
+msgid "保持为一个可用的趣味学习与教育平台。"
+msgstr "保持为一个可用的趣味学习与教育平台。"
+
+#: dojo_theme/templates/index.html:254
+msgid "学习深造"
+msgstr "学习深造"
+
+#: dojo_theme/templates/index.html:257
+msgid "当你学习完网络空间安全的基础知识并获得基础徽章后，你应该挑战更难的关卡。"
+msgstr "当你学习完网络空间安全的基础知识并获得基础徽章后，你应该挑战更难的关卡。"
+
+#: dojo_theme/templates/index.html:261
+msgid "CTF 是一个很好的方式，可以在有趣和合法的情况下练习你的黑客技能。查找即将举行的 CTF 活动的最流行的方式是在"
+msgstr "CTF 是一个很好的方式，可以在有趣和合法的情况下练习你的黑客技能。查找即将举行的 CTF 活动的最流行的方式是在"
+
+#: dojo_theme/templates/index.html:261
+msgid "，这里还有一个初学者 CTF 列表。如果你在华中科技大学学习，欢迎加入"
+msgstr "，这里还有一个初学者 CTF 列表。如果你在华中科技大学学习，欢迎加入"
+
+#: dojo_theme/templates/index.html:261
+msgid "L3H CTF 俱乐部"
+msgstr "L3H CTF 俱乐部"
+
+#: dojo_theme/templates/index.html:265
+msgid "如果你想参与网络空间安全方面的研究，但不知道如何入门，请考虑加入我们 Security Pride 课题组实习，并"
+msgstr "如果你想参与网络空间安全方面的研究，但不知道如何入门，请考虑加入我们 Security Pride 课题组实习，并"
+
+#: dojo_theme/templates/index.html:265
+msgid "联系我们"
+msgstr "联系我们"
+
+#: dojo_theme/templates/index.html:270
+msgid "贡献"
+msgstr "贡献"
+
+#: dojo_theme/templates/index.html:273
+msgid "基础架构及相关道馆仓库均开源在"
+msgstr "基础架构及相关道馆仓库均开源在"
+
+#: dojo_theme/templates/index.html:273
+msgid "华中科技大学开放原子开源俱乐部组织"
+msgstr "华中科技大学开放原子开源俱乐部组织"
+
+#: dojo_theme/templates/index.html:273
+msgid ""
+"，欢迎大家提交 PR 和 issue。然而，道馆仓库中不包含 write-up 或 "
+"solution。如果你是一位教育工作者，或者其他我们信任的人，并且对与神奇宝贝模块素材的合作感兴趣，可通过"
+msgstr ""
+"，欢迎大家提交 PR 和 issue。然而，道馆仓库中不包含 write-up 或 "
+"solution。如果你是一位教育工作者，或者其他我们信任的人，并且对与神奇宝贝模块素材的合作感兴趣，可通过"
+
+#: dojo_theme/templates/index.html:273
+msgid "联系我们。"
+msgstr "联系我们。"
+
+#: dojo_theme/templates/index.html:277
+msgid "如果你想参与贡献，请遵循"
+msgstr "如果你想参与贡献，请遵循"
+
+#: dojo_theme/templates/index.html:277
+msgid "“上游优先”"
+msgstr "“上游优先”"
+
+#: dojo_theme/templates/index.html:277
+msgid "原则，优先贡献由亚利桑那州立大学创建的上游"
+msgstr "原则，优先贡献由亚利桑那州立大学创建的上游"
+
+#: dojo_theme/templates/index.html:277
+msgid "平台。如果是"
+msgstr "平台。如果是"
+
+#: dojo_theme/templates/index.html:277
+msgid "平台上的特定问题或参与该平台的开源贡献，请提交 issue 或 PR 到我们的仓库。非常感谢！"
+msgstr "平台上的特定问题或参与该平台的开源贡献，请提交 issue 或 PR 到我们的仓库。非常感谢！"
+
+#: dojo_theme/templates/index.html:282
+msgid "运维团队"
+msgstr "运维团队"
+
+#: dojo_theme/templates/index.html:285
+msgid "目前本平台由华中科技大学"
+msgstr "目前本平台由华中科技大学"
+
+#: dojo_theme/templates/index.html:285
+msgid "网安学院开放原子开源俱乐部"
+msgstr "网安学院开放原子开源俱乐部"
+
+#: dojo_theme/templates/index.html:285
+msgid "成员开发并维护，他们分别是："
+msgstr "成员开发并维护，他们分别是："
+
+#: dojo_theme/templates/index.html:289
+msgid "慕冬亮"
+msgstr "慕冬亮"
+
+#: dojo_theme/templates/index.html:290
+msgid "丁鹏宇"
+msgstr "丁鹏宇"
+
+#: dojo_theme/templates/index.html:291
+msgid "胡崟昊"
+msgstr "胡崟昊"
+
+#: dojo_theme/templates/index.html:292
+msgid "黄宇浩"
+msgstr "黄宇浩"
+
+#: dojo_theme/templates/index.html:297
+msgid "资源"
+msgstr "资源"
+
+#: dojo_theme/templates/index.html:305
+msgid "开源俱乐部组织"
+msgstr "开源俱乐部组织"
+
+#: dojo_theme/templates/index.html:313
+msgid "邮件联系"
+msgstr "邮件联系"
+
+#: dojo_theme/templates/login.html:10
+msgid "普通用户请使用右上角统一身份登录系统！"
+msgstr "普通用户请使用右上角统一身份登录系统！"
+
+#: dojo_theme/templates/login.html:30
+msgid "忘记密码？"
+msgstr "忘记密码？"
+
+#: dojo_theme/templates/module.html:27
+msgid "课程讲解与资料学习"
+msgstr "课程讲解与资料学习"
+
+#: dojo_theme/templates/module.html:63
+msgid "挑战关卡"
+msgstr "挑战关卡"
+
+#: dojo_theme/templates/module.html:147
+msgid "模块排名"
+msgstr "模块排名"
+
+#: dojo_theme/templates/module.html:148
+msgid "此计分板反映了本道馆模块启动后挑战成功的记录。"
+msgstr "此计分板反映了本道馆模块启动后挑战成功的记录。"
+
+#: dojo_theme/templates/register.html:6
+msgid "注册"
+msgstr "注册"
+
+#: dojo_theme/templates/register.html:14
+msgid "基本规则"
+msgstr "基本规则"
+
+#: dojo_theme/templates/register.html:15
+msgid "在使用这个平台时，请记住一些基本规则！"
+msgstr "在使用这个平台时，请记住一些基本规则！"
+
+#: dojo_theme/templates/register.html:16
+msgid "通关攻略（Writeups）"
+msgstr "通关攻略（Writeups）"
+
+#: dojo_theme/templates/register.html:18
+msgid ""
+"pwn.hust.college "
+"创建的挑战关卡是教育素材，用于给华科网安学院的学生评分。因此，我们希望不要在互联网上发布这些挑战关卡的通关攻略、讲解视频和直播。显然，我们无法阻止您在互联网上发布内容，但我们努力使所有这些内容都变成公开的，我们希望您的帮助能够使"
+" pwn.hust.college 保持为一个可行的教育平台。"
+msgstr ""
+"pwn.hust.college "
+"创建的挑战关卡是教育素材，用于给华科网安学院的学生评分。因此，我们希望不要在互联网上发布这些挑战关卡的通关攻略、讲解视频和直播。显然，我们无法阻止您在互联网上发布内容，但我们努力使所有这些内容都变成公开的，我们希望您的帮助能够使"
+" pwn.hust.college 保持为一个可行的教育平台。"
+
+#: dojo_theme/templates/register.html:20
+msgid "漏洞悬赏"
+msgstr "漏洞悬赏"
+
+#: dojo_theme/templates/register.html:22
+msgid "即使是精英黑客，他们编写的软件中也会存在安全漏洞！如果你找到平台中的漏洞，请"
+msgstr "即使是精英黑客，他们编写的软件中也会存在安全漏洞！如果你找到平台中的漏洞，请"
+
+#: dojo_theme/templates/register.html:24
+msgid "给我们，非常感谢！如果你是华科网安学院的学生，我们会奖励给你额外的分数！"
+msgstr "给我们，非常感谢！如果你是华科网安学院的学生，我们会奖励给你额外的分数！"
+
+#: dojo_theme/templates/register.html:27
+msgid "注册!"
+msgstr "注册!"
+
+#: dojo_theme/templates/register.html:35
+msgid "平台用户名"
+msgstr "平台用户名"
+
+#: dojo_theme/templates/register.html:42
+msgid "切忌公开泄露"
+msgstr "切忌公开泄露"
+
+#: dojo_theme/templates/register.html:49
+msgid "用户登录密码"
+msgstr "用户登录密码"
+
+#: dojo_theme/templates/settings.html:6
+msgid "用户设置"
+msgstr "用户设置"
+
+#: dojo_theme/templates/components/navbar.html:33
+#: dojo_theme/templates/settings.html:13
+msgid "简介"
+msgstr "简介"
+
+#: dojo_theme/templates/settings.html:14
+msgid "SSH 公钥"
+msgstr "SSH 公钥"
+
+#: dojo_theme/templates/settings.html:63
+msgid "可见性"
+msgstr "可见性"
+
+#: dojo_theme/templates/settings.html:85
+msgid "现有 SSH 秘钥"
+msgstr "现有 SSH 秘钥"
+
+#: dojo_theme/templates/settings.html:107
+msgid "你的公钥已经被删除!"
+msgstr "你的公钥已经被删除!"
+
+#: dojo_theme/templates/settings.html:116
+msgid "添加新的 SSH 公钥"
+msgstr "添加新的 SSH 公钥"
+
+#: dojo_theme/templates/settings.html:117
+msgid "用于通过 `SSH` 远程访问挑战关卡"
+msgstr "用于通过 `SSH` 远程访问挑战关卡"
+
+#: dojo_theme/templates/settings.html:134
+msgid "连接到KOOK"
+msgstr "连接到KOOK"
+
+#: dojo_theme/templates/settings.html:138
+msgid "你的账户已经连接到KOOK。"
+msgstr "你的账户已经连接到KOOK。"
+
+#: dojo_theme/templates/settings.html:139
+msgid "用户名: "
+msgstr "用户名: "
+
+#: dojo_theme/templates/settings.html:142
+msgid "更换账户"
+msgstr "更换账户"
+
+#: dojo_theme/templates/settings.html:146
+msgid "解除绑定"
+msgstr "解除绑定"
+
+#: dojo_theme/templates/components/navbar.html:19
+msgid "VS Code"
+msgstr "VS Code"
+
+#: dojo_theme/templates/components/navbar.html:20
+msgid "桌面"
+msgstr "桌面"
+
+#: dojo_theme/templates/components/navbar.html:21
+msgid "聊天"
+msgstr "聊天"
+
+#: dojo_theme/templates/components/navbar.html:22
+msgid "帮助"
+msgstr "帮助"
+
+#: dojo_theme/templates/components/navbar.html:30
+msgid "管理面板"
+msgstr "管理面板"
+
+#: dojo_theme/templates/components/navbar.html:34
+msgid "设置"
+msgstr "设置"
+
+#: dojo_theme/templates/components/navbar.html:35
+msgid "注销"
+msgstr "注销"
+
+#: dojo_theme/templates/components/navbar.html:41
+msgid "统一身份认证"
+msgstr "统一身份认证"
+
+#: dojo_theme/templates/components/navbar.html:51
+msgid "隐藏导航栏"
+msgstr "隐藏导航栏"
+
+#: dojo_theme/templates/macros/scoreboard.html:4
+msgid "周"
+msgstr "周"
+
+#: dojo_theme/templates/macros/scoreboard.html:5
+msgid "月"
+msgstr "月"
+
+#: dojo_theme/templates/macros/scoreboard.html:6
+msgid "全部时间"
+msgstr "全部时间"
+
+#: dojo_theme/templates/macros/scoreboard.html:14
+msgid "排名"
+msgstr "排名"
+
+#: dojo_theme/templates/macros/scoreboard.html:19
+msgid "分数"
+msgstr "分数"
+

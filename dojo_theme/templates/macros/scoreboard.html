@@ -1,9 +1,9 @@
 {% macro scoreboard() -%}
 <div class="scoreboard-controls row">
   <p>
-  <span id="scoreboard-control-week"><a href="javascript:loadScoreboard(7, 1)">周</a></span> |
-  <span id="scoreboard-control-month"><a href="javascript:loadScoreboard(30, 1)">月</a></span> |
-  <span id="scoreboard-control-all"><a href="javascript:loadScoreboard(0, 1)">全部时间</a></span>
+  <span id="scoreboard-control-week"><a href="javascript:loadScoreboard(7, 1)">{{ _("周") }}</a></span> |
+  <span id="scoreboard-control-month"><a href="javascript:loadScoreboard(30, 1)">{{ _("月") }}</a></span> |
+  <span id="scoreboard-control-all"><a href="javascript:loadScoreboard(0, 1)">{{ _("全部时间") }}</a></span>
   </p>
 </div>
 <div class="scoreboard row">
@@ -11,12 +11,12 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <td scope="col" class="col-md-1"><b>排名</b></td>
+          <td scope="col" class="col-md-1"><b>{{ _("排名") }}</b></td>
           <td scope="col" class="col-md-1"></td>
-          <td scope="col" class="col-md-4"><b>黑客</b></td>
-          <td scope="col" class="col-md-4"><b>徽章</b></td>
+          <td scope="col" class="col-md-4"><b>{{ _("黑客") }}</b></td>
+          <td scope="col" class="col-md-4"><b>{{ _("徽章") }}</b></td>
           <td scope="col" class="col-md-1"></td>
-          <td scope="col" class="col-md-1"><b>分数</b></td>
+          <td scope="col" class="col-md-1"><b>{{ _("分数") }}</b></td>
         </tr>
       </thead>
       <tbody id="scoreboard">

@@ -108,7 +108,7 @@
                           {% endif %}
                         </span>
                       </h4>
-                      <h6>首次成功提交时间：{{user_solves[dojo.id][module.id][challenge.challenge_id]}}</h6>
+                      <h6>{{_("首次成功提交时间：")}}{{user_solves[dojo.id][module.id][challenge.challenge_id]}}</h6>
                       </div>
                       <div class="rating-container">
                         {% if challenge.data.level %}

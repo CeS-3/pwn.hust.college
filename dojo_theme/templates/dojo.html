@@ -14,7 +14,7 @@
     <figure>
       <a class="text-decoration-none" href="{{ url_for('pwncollege_dojos.view_dojo_admin', dojo=dojo.reference_id) }}">
         <i class="fas fa-users-cog fa-3x"></i>
-        <figcaption><b style="font-family: 'Courier New', Courier, monospace">管理员</b></figcaption>
+        <figcaption><b style="font-family: 'Courier New', Courier, monospace">{{ _("管理员") }}</b></figcaption>
       </a>
     </figure>
   </div>
@@ -22,7 +22,7 @@
   
   <br>
 
-  <h2 class="row">道馆简介</h2>
+  <h2 class="row">{{ _("道馆简介") }}</h2>
   <div class="row">
   {% if dojo.description %}
   <p>{{ dojo.description | markdown }}</p>
@@ -35,7 +35,7 @@
       <figure>
         <a class="text-decoration-none" href="{{ url_for('course.view_course', dojo=dojo.reference_id) }}">
           <i class="fas fa-graduation-cap fa-3x"></i>
-          <figcaption><b style="font-family: 'Courier New', Courier, monospace">课程</b></figcaption>
+          <figcaption><b style="font-family: 'Courier New', Courier, monospace">{{ _("课程") }}</b></figcaption>
         </a>
       </figure>
     </div>
@@ -47,29 +47,29 @@
 
   {% if dojo.award and dojo.award.get("emoji") %}
   {% set emoji = dojo.award["emoji"] %}
-  <h2 class="row">道馆奖项</h2>
+  <h2 class="row">{{ _("道馆奖项") }}</h2>
   <img style="width: 120px; margin: 24px 0;" src="/themes/dojo_theme/static/img/dojo/{{ emoji }}.svg">
   <br>
   {% endif %}
 
   {% if dojo.modules %}
-  <h2 class="row">道馆状态</h2>
+  <h2 class="row">{{ _("道馆状态") }}</h2>
   <br>
   <div class="row">
     <p>
-      <b>目前解决:</b> <code>{{ stats["active"] }}</code>
+      <b>{{ _("目前解决") }}:</b> <code>{{ stats["active"] }}</code>
       <br>
-      <b>黑客:</b> <code>{{ stats["users"] }}</code>
+      <b>{{ _("黑客") }}:</b> <code>{{ stats["users"] }}</code>
       <br>
-      <b>关卡:</b> <code>{{ stats["challenges"] }}</code>
+      <b>{{ _("关卡") }}:</b> <code>{{ stats["challenges"] }}</code>
       <br>
-      <b>解决方案:</b> <code>{{ stats["solves"] }}</code>
+      <b>{{ _("解决方案") }}:</b> <code>{{ stats["solves"] }}</code>
     </p>
   </div>
 
   <br>
 
-  <h2 class="row">道馆模块</h2>
+  <h2 class="row">{{ _("道馆模块") }}</h2>
   <br>
   <ul class="card-list">
     {% for module in dojo.modules %}
@@ -92,7 +92,7 @@
 
   <br>
 
-  <h2 class="row">道馆排名</h2>
+  <h2 class="row">{{ _("道馆排名") }}</h2>
   <br>
   {% from "macros/scoreboard.html" import scoreboard %}
   {{ scoreboard() }}

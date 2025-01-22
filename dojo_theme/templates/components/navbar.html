@@ -15,11 +15,12 @@
     </button>
     <div class="collapse navbar-collapse" id="base-navbars">
       <ul class="navbar-nav mr-auto">
-        {{ navitem("道馆", url_for("pwncollege_dojos.listing"), "fa-torii-gate", img="/themes/dojo_theme/static/img/dojo/pokemon-gym.svg") }}
-        {{ navitem("VS Code", url_for("pwncollege_workspace.view_workspace", service="vscode"), "fa-terminal", new=True) }}
-        {{ navitem("桌面", url_for("pwncollege_workspace.view_workspace", service="desktop"), "fa-desktop", new=True) }}
-        {{ navitem("聊天", "https://kook.top/soUkFL", "fa-comments", new=True) }}
-        {{ navitem("帮助", url_for("pwncollege_sensai.view_sensai"), "fa-question", new=True) }}
+        {{ navitem(_("道馆"), url_for("pwncollege_dojos.listing"), "fa-torii-gate", img="/themes/dojo_theme/static/img/dojo/pokemon-gym.svg") }}
+        {{ navitem(_("VS Code"), url_for("pwncollege_workspace.view_workspace", service="vscode"), "fa-terminal", new=True) }}
+        {{ navitem(_("桌面"), url_for("pwncollege_workspace.view_workspace", service="desktop"), "fa-desktop", new=True) }}
+        {{ navitem(_("聊天"), "https://kook.top/soUkFL", "fa-comments", new=True) }}
+        {{ navitem(_("帮助"), url_for("pwncollege_sensai.view_sensai"), "fa-question", new=True) }}
+        {{ navitem(_("语言"),url_for('set_language'),"fa-language", new=False)}}
       </ul>
 
       <hr class="d-sm-flex d-md-flex d-lg-none">
@@ -27,18 +28,18 @@
       <ul class="navbar-nav ml-md-auto d-block d-sm-flex d-md-flex">
         {% if authed() %}
         {% if is_admin() %}
-        {{ navitem("管理面板", url_for("admin.view"), "fa-wrench") }}
+        {{ navitem(_("管理面板"), url_for("admin.view"), "fa-wrench") }}
         {% endif %}
 
-        {{ navitem("简介", url_for("pwncollege_users.view_self"), "fa-user-circle") }}
-        {{ navitem("设置", url_for("views.settings"), "fa-cogs") }}
-        {{ navitem("注销", url_for("auth.logout"), "fa-sign-out-alt", shrink=True) }}
+        {{ navitem(_("简介"), url_for("pwncollege_users.view_self"), "fa-user-circle") }}
+        {{ navitem(_("设置"), url_for("views.settings"), "fa-cogs") }}
+        {{ navitem(_("注销"), url_for("auth.logout"), "fa-sign-out-alt", shrink=True) }}
 
         {% else %}
         {% if registration_visible() %}
         {% endif %}
 
-        {{ navitem("统一身份认证", url_for("pwncollege_sso.cas_login", next=request.full_path), "fa-sign-in-alt") }}
+        {{ navitem(_("统一身份认证"), url_for("pwncollege_sso.cas_login", next=request.full_path), "fa-sign-in-alt") }}
         {% endif %}
 
         <li class="nav-item">
@@ -48,7 +49,7 @@
             </span>
             <span class="d-sm-block d-md-none d-lg-block text-nowrap">
               <i class="fas fa-caret-up pr-1"></i>
-              <span class="d-lg-none">隐藏导航栏</span>
+              <span class="d-lg-none">{{ _("隐藏导航栏") }}</span>
             </span>
           </a>
         </li>

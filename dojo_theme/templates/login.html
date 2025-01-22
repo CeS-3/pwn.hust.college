@@ -7,7 +7,7 @@
 
 <div class="jumbotron">
 	<div class="container">
-		<h2>普通用户请使用右上角统一身份登录系统！</h2>
+		<h2>{{ _("普通用户请使用右上角统一身份登录系统！") }}</h2>
 	</div>
 </div>
 
@@ -27,7 +27,7 @@
 				<div class="row pt-3">
 					<div class="col-md-6">
 						<a class="float-left align-text-to-button" href="{{ url_for('auth.reset_password') }}">
-							忘记密码？
+							{{ _("忘记密码？") }}
 						</a>
 					</div>
 					<div class="col-md-6">

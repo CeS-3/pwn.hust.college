@@ -3,15 +3,15 @@
 {% block content %}
 <div class="jumbotron">
   <div class="container">
-    <h1>用户设置</h1>
+    <h1>{{ _("用户设置") }}</h1>
   </div>
 </div>
 <div class="container">
   <div class="row">
     <div class="col-md-2 offset-md-1">
       <div class="nav flex-column nav-pills" role="tablist">
-        <a class="nav-link active" id="settings-profile-tab" data-toggle="pill" href="#profile" role="tab">简介</a>
-        <a class="nav-link" id="settings-ssh-key-tab" data-toggle="pill" href="#ssh-key" role="tab">SSH 公钥</a>
+        <a class="nav-link active" id="settings-profile-tab" data-toggle="pill" href="#profile" role="tab">{{ _("简介") }}</a>
+        <a class="nav-link" id="settings-ssh-key-tab" data-toggle="pill" href="#ssh-key" role="tab">{{ _("SSH 公钥") }}</a>
         <a class="nav-link" id="settings-kook-tab" data-toggle="pill" href="#kook" role="tab">KOOK</a>
       </div>
     </div>
@@ -60,7 +60,7 @@
               {{ form.country(class="form-control custom-select", value=user.country) }}
             </div>
             <div class="form-group">
-              <b><label for="hidden">可见性</label></b>
+              <b><label for="hidden">{{ _("可见性") }}</label></b>
               <select class="form-control custom-select" id="hidden" name="hidden" value="{{ user.hidden }}">
                 <option value="False" {{ "selected" if not user.hidden else "" }}>Visible</option>
                 <option value="True" {{ "selected" if user.hidden else "" }}>Hidden</option>
@@ -82,7 +82,7 @@
         <div class="tab-pane fade" id="ssh-key" role="tabpanel">
 
           {% if ssh_keys %}
-            <b><label for="enter-name"> 现有 SSH 秘钥</label></b>
+            <b><label for="enter-name">{{ _("现有 SSH 秘钥") }}</label></b>
             <br>
 
             {% for key in ssh_keys %}
@@ -104,7 +104,7 @@
 
             <script>
               document.addEventListener('DOMContentLoaded', function() {
-                form_fetch_and_show("delete-ssh-key-{{ loop.index }}", "/pwncollege_api/v1/ssh_key", "DELETE", "你的公钥已经被删除!");
+                form_fetch_and_show("delete-ssh-key-{{ loop.index }}", "/pwncollege_api/v1/ssh_key", "DELETE", "{{ _('你的公钥已经被删除!') }}");
               });
             </script>
             {% endfor %}
@@ -113,8 +113,8 @@
 
           <form method="post" id="ssh-key-form" autocomplete="off">
             <div class="form-group">
-              <b><label for="enter-name">添加新的 SSH 公钥</label></b>
-              <small class="form-text text-muted"> 用于通过 `SSH` 远程访问挑战关卡 </small>
+              <b><label for="enter-name">{{ _("添加新的 SSH 公钥") }}</label></b>
+              <small class="form-text text-muted">{{ _("用于通过 `SSH` 远程访问挑战关卡") }}</small>
               <br>
               <input class="form-control" id="ssh-key" name="ssh_key" type="text" value="">
             </div>
@@ -131,19 +131,19 @@
         <div class="tab-pane fade" id="kook" role="tabpanel">
           {% if not kook_user %}
           <a href="{{ url_for('kook.kook_connect') }}">
-            <button class="btn btn-primary btn-lg">连接到KOOK</button>
+            <button class="btn btn-primary btn-lg">{{ _("连接到KOOK") }}</button>
           </a>
 
           {% else %}
-          <h3>你的账户已经连接到KOOK。</h3>
-          <div style="margin-bottom: 24px;">用户名: {{ kook_user.username }}</div>
+          <h3>{{ _("你的账户已经连接到KOOK。") }}</h3>
+          <div style="margin-bottom: 24px;">{{ _("用户名: ") }}{{ kook_user.username }}</div>
 
           <a href="{{ url_for('kook.kook_connect') }}">
-            <button class="btn btn-primary btn-lg">更换账户</button>
+            <button class="btn btn-primary btn-lg">{{ _("更换账户") }}</button>
           </a>
 
           <a href="{{ url_for('kook.kook_disconnect') }}">
-            <button class="btn btn-primary btn-lg">解除绑定</button>
+            <button class="btn btn-primary btn-lg">{{ _("解除绑定") }}</button>
           </a>
           {% endif %}
         </div>
